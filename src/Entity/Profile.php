@@ -104,7 +104,7 @@ class Profile
     public function getMessages(?int $limit = null)
     {
         $number = Util::formatNumber($this->number);
-        return Client::getInstance()->getChat($number, $limit);
+        return Client::getInstance()->getMessages($number, $limit);
     }
 
     /**
@@ -130,6 +130,44 @@ class Profile
     {
         $number = Util::formatNumber($this->number);
         return Client::getInstance()->sendLocation($number, $latitude, $longitude, $address, $url);
+    }
+
+    /**
+     * Sends a media message to this profile.
+     * @param string $file File location path or remote URL.
+     * @param string|null $message (Optional) Caption to send with the media.
+     * @param bool $viewOnce (Optional) Send the media as view once.
+     * @param bool $asDocument (Optional) Send the media as a document.
+     * @param bool $asVoice (Optional) Send audio media as a voice.
+     * @param bool $asGif (Optional) Send video media as a GIF.
+     * @param bool $asSticker (Optional) Send image media as a sticker.
+     * @return bool
+     */
+    public function sendMedia(string $file, ?string $message = null, bool $viewOnce = false, bool $asDocument = false, bool $asVoice = false, bool $asGif = false, bool $asSticker = false)
+    {
+        $number = Util::formatNumber($this->number);
+        return Client::getInstance()->sendMedia($number, $file, $message, $viewOnce, $asDocument, $asVoice, $asGif, $asSticker);
+    }
+
+    /**
+     * Sends a sticker to this profile.
+     * @param string $file Sticker image file location path or remote URL.
+     * @return bool
+     */
+    public function sendSticker(string $file)
+    {
+        return $this->sendMedia($file, null, false, false, false, false, true);
+    }
+
+    /**
+     * Sends a voice message to this profile.
+     * @param string $file Audio file location path or remote URL.
+     * @param bool $viewOnce (Optional) Send the audio as view once.
+     * @return bool
+     */
+    public function sendVoice(string $file, bool $viewOnce = false)
+    {
+        return $this->sendMedia($file, null, $viewOnce, false, true);
     }
 
     /**
