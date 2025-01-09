@@ -1,0 +1,19 @@
+{
+    "name": "eugabrielsilva/whatsapp-api-client-php",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gabriel Silva"
+        }
+    ],
+    "require": {
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "WhatsAppPHP\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
