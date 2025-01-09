@@ -8,18 +8,39 @@ use WhatsAppPHP\Entity\Message;
 use WhatsAppPHP\Entity\Profile;
 use WhatsAppPHP\Exception\RequestException;
 
+/**
+ * WhatsApp PHP client instance.
+ * @package eugabrielsilva/whatsapp-php
+ */
 class Client
 {
+    /**
+     * Base URL of the API.
+     * @var string
+     */
     private static $hostUrl;
-    private static $authToken;
-    private static $instance;
-
-    private function __construct()
-    {
-        // Unallow construction because of Singleton pattern
-    }
 
     /**
+     * Authentication token if any.
+     * @var string|null
+     */
+    private static $authToken;
+
+    /**
+     * Client instance.
+     * @var Client|null
+     */
+    private static $instance;
+
+    /**
+     * Disable construction because of Singleton pattern.
+     */
+    private function __construct() {}
+
+    /**
+     * Creates a Client instance.
+     * @param string $hostUrl Base URL of the API.
+     * @param string|null $authToken Authentication token if any.
      * @return Client
      */
     public static function create(string $hostUrl, ?string $authToken = null)
@@ -31,6 +52,7 @@ class Client
     }
 
     /**
+     * Gets the current Client instance.
      * @return Client
      */
     public static function getInstance()
@@ -40,6 +62,9 @@ class Client
     }
 
     /**
+     * Gets the messages from a chat.
+     * @param string $number Contact number to fetch messages.
+     * @param int|null $limit (Optional) Maximum number of messages to fetch. Leave blank to get as many as possible.
      * @return Message[]
      */
     public function getChat(string $number, ?int $limit = null)
@@ -55,6 +80,7 @@ class Client
     }
 
     /**
+     * Get a list of available chats.
      * @return Chat[]
      */
     public function getChats()
@@ -67,6 +93,8 @@ class Client
     }
 
     /**
+     * Gets a user profile.
+     * @param string $number Contact number to fetch profile.
      * @return Profile|null
      */
     public function getProfile(string $number)
@@ -77,6 +105,9 @@ class Client
     }
 
     /**
+     * Sends a text message.
+     * @param string $number Contact number to send message.
+     * @param string $message Message body.
      * @return bool
      */
     public function sendMessage(string $number, string $message)
@@ -90,6 +121,12 @@ class Client
     }
 
     /**
+     * Sends a location pin.
+     * @param string $number Contact number to send location.
+     * @param int $latitude Latitude coordinates.
+     * @param int $longitude Longitude coordinates.
+     * @param string|null $address (Optional) Address name to include in the message.
+     * @param string|null $url (Optional) URL to include in the message.
      * @return bool
      */
     public function sendLocation(string $number, int $latitude, int $longitude, ?string $address = null, ?string $url = null)
@@ -106,9 +143,13 @@ class Client
     }
 
     /**
+     * Perform an HTTP request.
+     * @param string $url URL path to request.
+     * @param string $method (Optional) HTTP method.
+     * @param array $data (Optional) Associative array with the request body.
      * @return object|null
      */
-    private function request(string $url, string $method = 'GET', ?array $data = null)
+    private function request(string $url, string $method = 'GET', array $data = [])
     {
         // Initialize CURL
         $ch = curl_init();

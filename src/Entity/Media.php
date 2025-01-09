@@ -6,13 +6,40 @@ use WhatsAppPHP\Client;
 use WhatsAppPHP\Exception\DownloadMediaException;
 use WhatsAppPHP\Util;
 
+/**
+ * WhatsApp PHP Media entity.
+ * @package eugabrielsilva/whatsapp-php
+ */
 class Media
 {
+    /**
+     * Media URL.
+     * @var string
+     */
     public $url;
+
+    /**
+     * Media mime type, if any.
+     * @var string
+     */
     public $type;
+
+    /**
+     * Media extension.
+     * @var string
+     */
     public $extension;
+
+    /**
+     * Media custom filename, if any.
+     * @var string|null
+     */
     public $filename;
 
+    /**
+     * Create Media entity.
+     * @param array $data (Optional) Associative array of data to populate.
+     */
     public function __construct(array $data = [])
     {
         foreach ($data as $key => $value) {
@@ -21,26 +48,15 @@ class Media
         }
     }
 
+    /**
+     * Downloads the media file, if available, to the local disk.
+     * @param string $path Location folder in where to salve the file.
+     * @param string $filename (Optional) Custom filename to set, leave blank to use the original filename.
+     * @return string
+     */
     public function downloadFile(string $path, ?string $filename = null)
     {
-        if (empty($this->url)) {
-            throw new DownloadMediaException("Media is not available for download.");
-        }
-
-        $fileContent = @file_get_contents($this->url);
-
-        if ($fileContent === false) {
-            throw new DownloadMediaException("Failed to download the media file from: {$this->url}.");
-        }
-
-        if (is_null($filename)) $filename = basename(parse_url($this->url, PHP_URL_PATH));
-        $path = rtrim($path, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR;
-        $fullPath = $path . $filename;
-
-        if (file_put_contents($fullPath, $fileContent) === false) {
-            throw new DownloadMediaException("Failed to save the media file to: {$fullPath}.");
-        }
-
-        return $fullPath;
+        if (empty($this->url)) throw new DownloadMediaException("Media is not available for download.");
+        return Util::downloadFile($this->url, $path, $filename);
     }
 }
