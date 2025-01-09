@@ -62,6 +62,36 @@ class Client
     }
 
     /**
+     * Checks if the client is logged in to WhatsApp.
+     * @return bool
+     */
+    public function checkLogin()
+    {
+        $response = $this->request('check-login');
+        return $response['status'] ?? false;
+    }
+
+    /**
+     * Performs a login to WhatsApp, if the client is not logged yet.
+     * @return string|bool
+     */
+    public function login()
+    {
+        $response = $this->request('login');
+        return $response ?? false;
+    }
+
+    /**
+     * Disconnects from WhatsApp, if the client is already logged in.
+     * @return bool
+     */
+    public function logout()
+    {
+        $response = $this->request('logout', 'POST');
+        return $response['status'] ?? false;
+    }
+
+    /**
      * Gets the messages from a chat.
      * @param string $number Contact number to fetch messages.
      * @param int|null $limit (Optional) Maximum number of messages to fetch. Leave blank to get as many as possible.
