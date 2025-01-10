@@ -61,4 +61,22 @@ class Location
     {
         return "https://www.google.com/maps?q={$this->latitude},{$this->longitude}";
     }
+
+    /**
+     * Converts the location to an Apple Maps link.
+     * @return string
+     */
+    public function toAppleMaps()
+    {
+        return "https://maps.apple.com/?ll={$this->latitude},{$this->longitude}";
+    }
+
+    /**
+     * Converts the location to a Waze link.
+     * @return string
+     */
+    public function toWaze()
+    {
+        return "https://www.waze.com/ul?ll={$this->latitude},{$this->longitude}&navigate=yes";
+    }
 }

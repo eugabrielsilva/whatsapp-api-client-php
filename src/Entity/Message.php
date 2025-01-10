@@ -121,4 +121,15 @@ class Message
         $number = Util::formatNumber($this->to);
         return Client::getInstance()->getProfile($number);
     }
+
+    /**
+     * Replies the message to the sender.
+     * @param string $message Message body.
+     * @return bool
+     */
+    public function reply(string $message)
+    {
+        $number = Util::formatNumber($this->from);
+        return Client::getInstance()->sendMessage($number, $message, $this->id);
+    }
 }

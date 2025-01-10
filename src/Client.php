@@ -143,16 +143,31 @@ class Client
     }
 
     /**
+     * Gets a list of all contact profiles.
+     * @return Profile[]
+     */
+    public function getContacts()
+    {
+        $response = $this->request('get-contacts');
+
+        return array_map(function ($contact) {
+            return new Profile($contact);
+        }, $response['contacts'] ?? []);
+    }
+
+    /**
      * Sends a text message.
      * @param string $number Contact number to send message.
      * @param string $message Message body.
+     * @param string|null $replyTo (Optional) Another message ID to reply to.
      * @return bool
      */
-    public function sendMessage(string $number, string $message)
+    public function sendMessage(string $number, string $message, ?string $replyTo = null)
     {
         $number = Util::formatNumber($number);
         $response = $this->request("send-message/{$number}", 'POST', [
-            'message' => $message
+            'message' => $message,
+            'reply_to' => $replyTo
         ]);
 
         return $response['status'] ?? false;
@@ -165,16 +180,18 @@ class Client
      * @param int $longitude Longitude coordinates.
      * @param string|null $address (Optional) Address name to include in the message.
      * @param string|null $url (Optional) URL to include in the message.
+     * @param string|null $replyTo (Optional) Another message ID to reply to.
      * @return bool
      */
-    public function sendLocation(string $number, int $latitude, int $longitude, ?string $address = null, ?string $url = null)
+    public function sendLocation(string $number, int $latitude, int $longitude, ?string $address = null, ?string $url = null, ?string $replyTo = null)
     {
         $number = Util::formatNumber($number);
         $response = $this->request("send-location/$number", 'POST', [
             'latitude' => $latitude,
             'longitude' => $longitude,
             'address' => $address,
-            'url' => $url
+            'url' => $url,
+            'reply_to' => $replyTo
         ]);
 
         return $response['status'] ?? false;
@@ -190,9 +207,10 @@ class Client
      * @param bool $asVoice (Optional) Send audio media as a voice.
      * @param bool $asGif (Optional) Send video media as a GIF.
      * @param bool $asSticker (Optional) Send image media as a sticker.
+     * @param string|null $replyTo (Optional) Another message ID to reply to.
      * @return bool
      */
-    public function sendMedia(string $number, string $file, ?string $message = null, bool $viewOnce = false, bool $asDocument = false, bool $asVoice = false, bool $asGif = false, bool $asSticker = false)
+    public function sendMedia(string $number, string $file, ?string $message = null, bool $viewOnce = false, bool $asDocument = false, bool $asVoice = false, bool $asGif = false, bool $asSticker = false, ?string $replyTo = null)
     {
         $number = Util::formatNumber($number);
         $response = $this->request("send-media/$number", 'POST', [
@@ -201,7 +219,8 @@ class Client
             'as_document' => $asDocument,
             'as_voice' => $asVoice,
             'as_gif' => $asGif,
-            'as_sticker' => $asSticker
+            'as_sticker' => $asSticker,
+            'reply_to' => $replyTo
         ], $file);
 
         return $response['status'] ?? false;
@@ -211,11 +230,12 @@ class Client
      * Sends a sticker.
      * @param string $number Contact number to send the sticker.
      * @param string $file Sticker image file location path or remote URL.
+     * @param string|null $replyTo (Optional) Another message ID to reply to.
      * @return bool
      */
-    public function sendSticker(string $number, string $file)
+    public function sendSticker(string $number, string $file, ?string $replyTo = null)
     {
-        return $this->sendMedia($number, $file, null, false, false, false, false, true);
+        return $this->sendMedia($number, $file, null, false, false, false, false, true, $replyTo);
     }
 
     /**
@@ -223,11 +243,12 @@ class Client
      * @param string $number Contact number to send the voice message.
      * @param string $file Audio file location path or remote URL.
      * @param bool $viewOnce (Optional) Send the audio as view once.
+     * @param string|null $replyTo (Optional) Another message ID to reply to.
      * @return bool
      */
-    public function sendVoice(string $number, string $file, bool $viewOnce = false)
+    public function sendVoice(string $number, string $file, bool $viewOnce = false, ?string $replyTo = null)
     {
-        return $this->sendMedia($number, $file, null, $viewOnce, false, true);
+        return $this->sendMedia($number, $file, null, $viewOnce, false, true, $replyTo);
     }
 
     /**
@@ -248,13 +269,13 @@ class Client
      * @param string $method (Optional) HTTP method.
      * @param array $data (Optional) Associative array with the request body.
      * @param string $file (Optional) Uploadable file location or URL.
-     * @return object|null
+     * @return array|null
      */
     private function request(string $url, string $method = 'GET', array $data = [], ?string $file = null)
     {
         // Initialize CURL
         $ch = curl_init();
-        $token = self::$authToken;
+        $token = self::$authToken ?? '';
 
         // Set CURL options
         curl_setopt_array($ch, [
@@ -270,7 +291,11 @@ class Client
 
         // Upload file if any
         if (!is_null($file)) {
-            $fileName = Util::downloadFile($file, sys_get_temp_dir(), uniqid('wa_') . '.tmp');
+            if (is_file($file)) {
+                $fileName = realpath($file);
+            } else {
+                $fileName = Util::downloadFile($file, sys_get_temp_dir(), uniqid('wa_') . '.tmp');
+            }
             $data['file'] = new CURLFile($fileName, mime_content_type($fileName), basename($file));
         }
 
@@ -286,6 +311,11 @@ class Client
                 'Content-Type: application/json',
                 "Authorization: Bearer $token",
             ];
+
+            // Cleanup data
+            $data = array_filter($data, function ($value) {
+                return !is_null($value);
+            });
 
             if (!empty($data)) {
                 if ($method === 'GET') {
@@ -317,7 +347,7 @@ class Client
             (isset($info['http_code']) && $info['http_code'] >= 400) ||
             (isset($body['status']) && $body['status'] === false)
         ) {
-            throw new RequestException($body['error'] ?? 'Unexpected HTTP error.', $info['http_code']);
+            throw new RequestException($body['error'] ?? 'Unexpected HTTP error.', $info['http_code'], $body['details'] ?? null);
         }
 
         // Close connection
