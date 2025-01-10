@@ -52,7 +52,7 @@ class Client
      */
     public static function create(string $hostUrl, ?string $authToken = null, int $timeout = 30)
     {
-        self::$hostUrl = trim($hostUrl, '/');
+        self::$hostUrl = rtrim($hostUrl, '/');
         self::$authToken = $authToken;
         self::$timeout = $timeout;
         self::$instance = new self();
@@ -109,7 +109,6 @@ class Client
     {
         $number = Util::formatNumber($number);
         if ($limit) $limit = ['limit' => $limit];
-
         $response = $this->request("get-chat/$number", 'GET', $limit ?? []);
 
         return array_map(function ($message) {
@@ -138,7 +137,7 @@ class Client
     public function getProfile(string $number)
     {
         $number = Util::formatNumber($number);
-        $response = $this->request("get-profile/$number", 'GET');
+        $response = $this->request("get-profile/$number");
         return isset($response['profile']) ? new Profile($response['profile']) : null;
     }
 
@@ -153,6 +152,16 @@ class Client
         return array_map(function ($contact) {
             return new Profile($contact);
         }, $response['contacts'] ?? []);
+    }
+
+    /**
+     * Gets the current connected user profile.
+     * @return Profile|null
+     */
+    public function getUser()
+    {
+        $response = $this->request("get-me");
+        return isset($response['profile']) ? new Profile($response['profile']) : null;
     }
 
     /**
@@ -289,19 +298,24 @@ class Client
             CURLOPT_FAILONERROR => false,
         ]);
 
+        // Cleanup data
+        $data = array_filter($data, function ($value) {
+            return !is_null($value);
+        });
+
         // Upload file if any
         if (!is_null($file)) {
-            if (is_file($file)) {
-                $fileName = realpath($file);
-            } else {
+            if (!is_file($file)) {
                 $fileName = Util::downloadFile($file, sys_get_temp_dir(), uniqid('wa_') . '.tmp');
             }
+            $fileName = realpath($file);
             $data['file'] = new CURLFile($fileName, mime_content_type($fileName), basename($file));
         }
 
         // Prepare headers and data
         if (!empty($data['file'])) {
             $headers = [
+                'Content-Type: multipart/form-data',
                 "Authorization: Bearer $token",
             ];
 
@@ -311,11 +325,6 @@ class Client
                 'Content-Type: application/json',
                 "Authorization: Bearer $token",
             ];
-
-            // Cleanup data
-            $data = array_filter($data, function ($value) {
-                return !is_null($value);
-            });
 
             if (!empty($data)) {
                 if ($method === 'GET') {

@@ -2,7 +2,6 @@
 
 namespace WhatsAppPHP\Entity;
 
-use WhatsAppPHP\Client;
 use WhatsAppPHP\Exception\DownloadMediaException;
 use WhatsAppPHP\Util;
 

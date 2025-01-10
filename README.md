@@ -14,5 +14,6 @@ use WhatsAppPHP\Client;
 
 require_once 'vendor/autoload.php';
 
-$client = Client::create('http://localhost:3000', 'auth_token_optional');
+// Create the Client instance with the base API URL and your auth token
+$client = Client::create('http://localhost:3000', 'optional_auth_token');
 ```

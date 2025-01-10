@@ -2,6 +2,7 @@
 
 namespace WhatsAppPHP\Entity;
 
+use DateTime;
 use WhatsAppPHP\Client;
 use WhatsAppPHP\Util;
 
@@ -24,8 +25,8 @@ class Chat
     public $name;
 
     /**
-     * Last message date formatted locally.
-     * @var string
+     * Last message date.
+     * @var DateTime|string
      */
     public $date;
 
@@ -72,8 +73,12 @@ class Chat
     public function __construct(array $data = [])
     {
         foreach ($data as $key => $value) {
-            $key = Util::snakeToCamelCase($key);
-            $this->{$key} = $value;
+            if ($key === 'timestamp') {
+                $this->date = new DateTime("@$value");
+            } else {
+                $key = Util::snakeToCamelCase($key);
+                $this->{$key} = $value;
+            }
         }
     }
 
@@ -83,8 +88,7 @@ class Chat
      */
     public function getProfile()
     {
-        $number = Util::formatNumber($this->id);
-        return Client::getInstance()->getProfile($number);
+        return Client::getInstance()->getProfile($this->id);
     }
 
     /**
@@ -94,8 +98,7 @@ class Chat
      */
     public function getMessages(?int $limit = null)
     {
-        $number = Util::formatNumber($this->id);
-        return Client::getInstance()->getMessages($number, $limit);
+        return Client::getInstance()->getMessages($this->id, $limit);
     }
 
     /**
@@ -105,8 +108,7 @@ class Chat
      */
     public function sendMessage(string $message)
     {
-        $number = Util::formatNumber($this->id);
-        return Client::getInstance()->sendMessage($number, $message);
+        return Client::getInstance()->sendMessage($this->id, $message);
     }
 
     /**
@@ -119,8 +121,7 @@ class Chat
      */
     public function sendLocation(int $latitude, int $longitude, ?string $address = null, ?string $url = null)
     {
-        $number = Util::formatNumber($this->id);
-        return Client::getInstance()->sendLocation($number, $latitude, $longitude, $address, $url);
+        return Client::getInstance()->sendLocation($this->id, $latitude, $longitude, $address, $url);
     }
 
     /**
@@ -136,8 +137,7 @@ class Chat
      */
     public function sendMedia(string $file, ?string $message = null, bool $viewOnce = false, bool $asDocument = false, bool $asVoice = false, bool $asGif = false, bool $asSticker = false)
     {
-        $number = Util::formatNumber($this->id);
-        return Client::getInstance()->sendMedia($number, $file, $message, $viewOnce, $asDocument, $asVoice, $asGif, $asSticker);
+        return Client::getInstance()->sendMedia($this->id, $file, $message, $viewOnce, $asDocument, $asVoice, $asGif, $asSticker);
     }
 
     /**

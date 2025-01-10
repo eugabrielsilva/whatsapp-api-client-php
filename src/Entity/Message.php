@@ -2,6 +2,7 @@
 
 namespace WhatsAppPHP\Entity;
 
+use DateTime;
 use WhatsAppPHP\Client;
 use WhatsAppPHP\Util;
 
@@ -42,8 +43,8 @@ class Message
     public $body;
 
     /**
-     * Message date formatted locally.
-     * @var string
+     * Message date.
+     * @var DateTime|string
      */
     public $date;
 
@@ -95,6 +96,8 @@ class Message
                 $this->media = new Media($value);
             } else if ($key === 'location') {
                 $this->location = new Location($value);
+            } else if ($key === 'timestamp') {
+                $this->date = new DateTime("@$value");
             } else {
                 $key = Util::snakeToCamelCase($key);
                 $this->{$key} = $value;
@@ -108,8 +111,7 @@ class Message
      */
     public function getFromProfile()
     {
-        $number = Util::formatNumber($this->from);
-        return Client::getInstance()->getProfile($number);
+        return Client::getInstance()->getProfile($this->from);
     }
 
     /**
@@ -118,8 +120,7 @@ class Message
      */
     public function getToProfile()
     {
-        $number = Util::formatNumber($this->to);
-        return Client::getInstance()->getProfile($number);
+        return Client::getInstance()->getProfile($this->to);
     }
 
     /**
@@ -129,7 +130,6 @@ class Message
      */
     public function reply(string $message)
     {
-        $number = Util::formatNumber($this->from);
-        return Client::getInstance()->sendMessage($number, $message, $this->id);
+        return Client::getInstance()->sendMessage($this->from, $message, $this->id);
     }
 }

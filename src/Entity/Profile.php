@@ -103,8 +103,7 @@ class Profile
      */
     public function getMessages(?int $limit = null)
     {
-        $number = Util::formatNumber($this->number);
-        return Client::getInstance()->getMessages($number, $limit);
+        return Client::getInstance()->getMessages($this->number, $limit);
     }
 
     /**
@@ -114,8 +113,7 @@ class Profile
      */
     public function sendMessage(string $message)
     {
-        $number = Util::formatNumber($this->number);
-        return Client::getInstance()->sendMessage($number, $message);
+        return Client::getInstance()->sendMessage($this->number, $message);
     }
 
     /**
@@ -128,8 +126,7 @@ class Profile
      */
     public function sendLocation(int $latitude, int $longitude, ?string $address = null, ?string $url = null)
     {
-        $number = Util::formatNumber($this->number);
-        return Client::getInstance()->sendLocation($number, $latitude, $longitude, $address, $url);
+        return Client::getInstance()->sendLocation($this->number, $latitude, $longitude, $address, $url);
     }
 
     /**
@@ -145,8 +142,7 @@ class Profile
      */
     public function sendMedia(string $file, ?string $message = null, bool $viewOnce = false, bool $asDocument = false, bool $asVoice = false, bool $asGif = false, bool $asSticker = false)
     {
-        $number = Util::formatNumber($this->number);
-        return Client::getInstance()->sendMedia($number, $file, $message, $viewOnce, $asDocument, $asVoice, $asGif, $asSticker);
+        return Client::getInstance()->sendMedia($this->number, $file, $message, $viewOnce, $asDocument, $asVoice, $asGif, $asSticker);
     }
 
     /**

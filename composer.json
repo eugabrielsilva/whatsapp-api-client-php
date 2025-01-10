@@ -1,5 +1,6 @@
 {
     "name": "eugabrielsilva/whatsapp-php",
+    "description": "A PHP client SDK for eugabrielsilva/whatsapp-api.",
     "license": "MIT",
     "authors": [
         {
@@ -7,6 +8,7 @@
         }
     ],
     "require": {
+        "php": "^7.4|^8.0",
         "ext-curl": "*"
     },
     "autoload": {
