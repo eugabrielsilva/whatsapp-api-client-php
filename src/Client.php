@@ -47,7 +47,8 @@ class Client
     /**
      * Creates a Client instance.
      * @param string $hostUrl Base URL of the API.
-     * @param string|null $authToken Authentication token if any.
+     * @param string|null $authToken (Optional) Authentication token if any.
+     * @param int $timeout (Optional) Request timeout in seconds.
      * @return Client
      */
     public static function create(string $hostUrl, ?string $authToken = null, int $timeout = 30)
@@ -57,6 +58,39 @@ class Client
         self::$timeout = $timeout;
         self::$instance = new self();
         return self::$instance;
+    }
+
+    /**
+     * Sets the API auth token.
+     * @param string|null $authToken Authentication token if any.
+     * @return $this
+     */
+    public function setAuthToken(?string $authToken)
+    {
+        self::$authToken = $authToken;
+        return $this;
+    }
+
+    /**
+     * Sets the base URL of the API.
+     * @param string $hostUrl URL.
+     * @return $this
+     */
+    public function setHostUrl(string $hostUrl)
+    {
+        self::$hostUrl = $hostUrl;
+        return $this;
+    }
+
+    /**
+     * Sets the request timeout.
+     * @param int $timeout (Optional) Request timeout in seconds.
+     * @return $this
+     */
+    public function setTimeout(int $timeout)
+    {
+        self::$timeout = $timeout;
+        return $this;
     }
 
     /**
@@ -160,7 +194,7 @@ class Client
      */
     public function getUser()
     {
-        $response = $this->request("get-me");
+        $response = $this->request('get-me');
         return isset($response['profile']) ? new Profile($response['profile']) : null;
     }
 
