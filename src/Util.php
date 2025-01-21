@@ -13,7 +13,7 @@ class Util
     /**
      * Converts a snake_case string to camelCase.
      * @param string $name String to convert.
-     * @return string
+     * @return string Returns the converted string.
      */
     public static function snakeToCamelCase(string $name)
     {
@@ -28,7 +28,7 @@ class Util
     /**
      * Formats a phone to international number.
      * @param string $number Number to format.
-     * @return string
+     * @return string Returns the formatted number.
      */
     public static function formatNumber(string $number)
     {
@@ -40,7 +40,7 @@ class Util
      * @param string $url Remote URL to download.
      * @param string $path Location folder in where to salve the file.
      * @param string $filename (Optional) Custom filename to set, leave blank to use the original filename.
-     * @return string
+     * @return string Returns the downloaded file location.
      */
     public static function downloadFile(string $url, string $path, ?string $filename = null): string
     {
@@ -77,5 +77,16 @@ class Util
         }
 
         return $fullPath;
+    }
+
+    /**
+     * Checks if a string contains a substring.
+     * @param string $haystack The string to search in.
+     * @param string $needle The substring to search for.
+     * @return bool True if contains, false otherwise.
+     */
+    public static function stringContains(string $haystack, string $needle)
+    {
+        return $needle !== '' && strpos($haystack, $needle) !== false;
     }
 }

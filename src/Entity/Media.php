@@ -51,7 +51,7 @@ class Media
      * Downloads the media file, if available, to the local disk.
      * @param string $path Location folder in where to salve the file.
      * @param string $filename (Optional) Custom filename to set, leave blank to use the original filename.
-     * @return string
+     * @return string Returns the downloaded file location.
      */
     public function downloadFile(string $path, ?string $filename = null)
     {

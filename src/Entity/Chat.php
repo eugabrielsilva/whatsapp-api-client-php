@@ -84,7 +84,7 @@ class Chat
 
     /**
      * Gets the profile associated with this chat.
-     * @return Profile|null
+     * @return Profile|null Returns the profile if found.
      */
     public function getProfile()
     {
@@ -94,7 +94,7 @@ class Chat
     /**
      * Gets the messages from this chat.
      * @param int|null $limit (Optional) Maximum number of messages to fetch. Leave blank to get as many as possible.
-     * @return Message[]
+     * @return Message[] Returns a list of messages.
      */
     public function getMessages(?int $limit = null)
     {
@@ -104,7 +104,7 @@ class Chat
     /**
      * Sends a text message to this chat.
      * @param string $message Message body.
-     * @return bool
+     * @return bool Returns true on success, false on failure.
      */
     public function sendMessage(string $message)
     {
@@ -117,7 +117,7 @@ class Chat
      * @param int $longitude Longitude coordinates.
      * @param string|null $address (Optional) Address name to include in the message.
      * @param string|null $url (Optional) URL to include in the message.
-     * @return bool
+     * @return bool Returns true on success, false on failure.
      */
     public function sendLocation(int $latitude, int $longitude, ?string $address = null, ?string $url = null)
     {
@@ -133,7 +133,7 @@ class Chat
      * @param bool $asVoice (Optional) Send audio media as a voice.
      * @param bool $asGif (Optional) Send video media as a GIF.
      * @param bool $asSticker (Optional) Send image media as a sticker.
-     * @return bool
+     * @return bool Returns true on success, false on failure.
      */
     public function sendMedia(string $file, ?string $message = null, bool $viewOnce = false, bool $asDocument = false, bool $asVoice = false, bool $asGif = false, bool $asSticker = false)
     {
@@ -143,7 +143,7 @@ class Chat
     /**
      * Sends a sticker to this chat.
      * @param string $file Sticker image file location path or remote URL.
-     * @return bool
+     * @return bool Returns true on success, false on failure.
      */
     public function sendSticker(string $file)
     {
@@ -154,7 +154,7 @@ class Chat
      * Sends a voice message to this chat.
      * @param string $file Audio file location path or remote URL.
      * @param bool $viewOnce (Optional) Send the audio as view once.
-     * @return bool
+     * @return bool Returns true on success, false on failure.
      */
     public function sendVoice(string $file, bool $viewOnce = false)
     {

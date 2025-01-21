@@ -7,6 +7,7 @@ use Exception;
 use WhatsAppPHP\Entity\Chat;
 use WhatsAppPHP\Entity\Message;
 use WhatsAppPHP\Entity\Profile;
+use WhatsAppPHP\Entity\QRCode;
 use WhatsAppPHP\Exception\RequestException;
 
 /**
@@ -49,7 +50,7 @@ class Client
      * @param string $hostUrl Base URL of the API.
      * @param string|null $authToken (Optional) Authentication token if any.
      * @param int $timeout (Optional) Request timeout in seconds.
-     * @return Client
+     * @return Client Returns the client instance.
      */
     public static function create(string $hostUrl, ?string $authToken = null, int $timeout = 30)
     {
@@ -63,7 +64,7 @@ class Client
     /**
      * Sets the API auth token.
      * @param string|null $authToken Authentication token if any.
-     * @return $this
+     * @return Client Returns the client instance.
      */
     public function setAuthToken(?string $authToken)
     {
@@ -74,7 +75,7 @@ class Client
     /**
      * Sets the base URL of the API.
      * @param string $hostUrl URL.
-     * @return $this
+     * @return Client Returns the client instance.
      */
     public function setHostUrl(string $hostUrl)
     {
@@ -85,7 +86,7 @@ class Client
     /**
      * Sets the request timeout.
      * @param int $timeout (Optional) Request timeout in seconds.
-     * @return $this
+     * @return Client Returns the client instance.
      */
     public function setTimeout(int $timeout)
     {
@@ -95,7 +96,7 @@ class Client
 
     /**
      * Gets the current Client instance.
-     * @return Client
+     * @return Client Returns the client instance.
      */
     public static function getInstance()
     {
@@ -105,7 +106,7 @@ class Client
 
     /**
      * Checks if the client is logged in to WhatsApp.
-     * @return bool
+     * @return bool Returns true on logged in, otherwise false.
      */
     public function checkLogin()
     {
@@ -115,17 +116,17 @@ class Client
 
     /**
      * Performs a login to WhatsApp, if the client is not logged yet.
-     * @return string|bool
+     * @return QRCode|bool Returns the QR Code, false if already logged in.
      */
     public function login()
     {
         $response = $this->request('login');
-        return $response ?? false;
+        return isset($response['data']) ? new QRCode($response['data']) : false;
     }
 
     /**
      * Disconnects from WhatsApp, if the client is already logged in.
-     * @return bool
+     * @return bool Returns true on success, false on failure.
      */
     public function logout()
     {
@@ -134,10 +135,30 @@ class Client
     }
 
     /**
+     * Sends an Online presence status to the client.
+     * @return bool Returns true on success, false on failure.
+     */
+    public function setOnline()
+    {
+        $response = $this->request('set-online', 'POST');
+        return $response['status'] ?? false;
+    }
+
+    /**
+     * Sends an Offline presence status to the client.
+     * @return bool Returns true on success, false on failure.
+     */
+    public function setOffline()
+    {
+        $response = $this->request('set-offline', 'POST');
+        return $response['status'] ?? false;
+    }
+
+    /**
      * Gets the messages from a chat.
      * @param string $number Contact number to fetch messages.
      * @param int|null $limit (Optional) Maximum number of messages to fetch. Leave blank to get as many as possible.
-     * @return Message[]
+     * @return Message[] Returns a list of messages.
      */
     public function getMessages(string $number, ?int $limit = null)
     {
@@ -151,8 +172,30 @@ class Client
     }
 
     /**
+     * Searches for a message.
+     * @param string $query Query string to search.
+     * @param string|null $number (Optional) Specific contact number to search in.
+     * @param int|null $limit (Optional) Maximum number of messages to fetch.
+     * @param int|null $page (Optional) Results page number.
+     * @return Message[] Returns a list of messages.
+     */
+    public function searchMessages(string $query, ?string $number = null, ?int $limit = null, ?int $page = null)
+    {
+        $response = $this->request('search-messages', 'GET', [
+            'query' => $query,
+            'limit' => $limit,
+            'number' => $number,
+            'page' => $page,
+        ]);
+
+        return array_map(function ($message) {
+            return new Message($message);
+        }, $response['messages'] ?? []);
+    }
+
+    /**
      * Get a list of available chats.
-     * @return Chat[]
+     * @return Chat[] Returns a list of chats.
      */
     public function getChats()
     {
@@ -166,7 +209,7 @@ class Client
     /**
      * Gets a user profile.
      * @param string $number Contact number to fetch profile.
-     * @return Profile|null
+     * @return Profile|null Returns the profile if found.
      */
     public function getProfile(string $number)
     {
@@ -177,7 +220,7 @@ class Client
 
     /**
      * Gets a list of all contact profiles.
-     * @return Profile[]
+     * @return Profile[] Returns a list of profiles.
      */
     public function getContacts()
     {
@@ -190,7 +233,7 @@ class Client
 
     /**
      * Gets the current connected user profile.
-     * @return Profile|null
+     * @return Profile|null Returns the profile if found.
      */
     public function getUser()
     {
@@ -203,7 +246,7 @@ class Client
      * @param string $number Contact number to send message.
      * @param string $message Message body.
      * @param string|null $replyTo (Optional) Another message ID to reply to.
-     * @return bool
+     * @return bool Returns true on success, false on failure.
      */
     public function sendMessage(string $number, string $message, ?string $replyTo = null)
     {
@@ -224,7 +267,7 @@ class Client
      * @param string|null $address (Optional) Address name to include in the message.
      * @param string|null $url (Optional) URL to include in the message.
      * @param string|null $replyTo (Optional) Another message ID to reply to.
-     * @return bool
+     * @return bool Returns true on success, false on failure.
      */
     public function sendLocation(string $number, int $latitude, int $longitude, ?string $address = null, ?string $url = null, ?string $replyTo = null)
     {
@@ -251,7 +294,7 @@ class Client
      * @param bool $asGif (Optional) Send video media as a GIF.
      * @param bool $asSticker (Optional) Send image media as a sticker.
      * @param string|null $replyTo (Optional) Another message ID to reply to.
-     * @return bool
+     * @return bool Returns true on success, false on failure.
      */
     public function sendMedia(string $number, string $file, ?string $message = null, bool $viewOnce = false, bool $asDocument = false, bool $asVoice = false, bool $asGif = false, bool $asSticker = false, ?string $replyTo = null)
     {
@@ -274,7 +317,7 @@ class Client
      * @param string $number Contact number to send the sticker.
      * @param string $file Sticker image file location path or remote URL.
      * @param string|null $replyTo (Optional) Another message ID to reply to.
-     * @return bool
+     * @return bool Returns true on success, false on failure.
      */
     public function sendSticker(string $number, string $file, ?string $replyTo = null)
     {
@@ -287,7 +330,7 @@ class Client
      * @param string $file Audio file location path or remote URL.
      * @param bool $viewOnce (Optional) Send the audio as view once.
      * @param string|null $replyTo (Optional) Another message ID to reply to.
-     * @return bool
+     * @return bool Returns true on success, false on failure.
      */
     public function sendVoice(string $number, string $file, bool $viewOnce = false, ?string $replyTo = null)
     {
@@ -297,7 +340,7 @@ class Client
     /**
      * Consumes a message received webhook.
      * @param string $body Request body in raw format.
-     * @return Message|null
+     * @return Message|null Returns the message if valid.
      */
     public function consumeWebhook(string $body)
     {
@@ -312,7 +355,7 @@ class Client
      * @param string $method (Optional) HTTP method.
      * @param array $data (Optional) Associative array with the request body.
      * @param string $file (Optional) Uploadable file location or URL.
-     * @return array|null
+     * @return array|null Returns the response if valid.
      */
     private function request(string $url, string $method = 'GET', array $data = [], ?string $file = null)
     {

@@ -32,7 +32,7 @@ class RequestException extends Exception
 
     /**
      * Returns the exception details, if any.
-     * @return string|null
+     * @return string|null Returns the details.
      */
     public function getDetails()
     {

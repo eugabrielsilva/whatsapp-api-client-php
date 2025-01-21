@@ -107,7 +107,7 @@ class Message
 
     /**
      * Gets the profile of the message sender.
-     * @return Profile|null
+     * @return Profile|null Returns the profile if found.
      */
     public function getFromProfile()
     {
@@ -116,7 +116,7 @@ class Message
 
     /**
      * Gets the profile of the message receiver.
-     * @return Profile|null
+     * @return Profile|null Returns the profile if found.
      */
     public function getToProfile()
     {
@@ -126,10 +126,19 @@ class Message
     /**
      * Replies the message to the sender.
      * @param string $message Message body.
-     * @return bool
+     * @return bool Returns true on success, false on failure.
      */
     public function reply(string $message)
     {
         return Client::getInstance()->sendMessage($this->from, $message, $this->id);
+    }
+
+    /**
+     * Gets the message body as string.
+     * @return string Message body.
+     */
+    public function __toString()
+    {
+        return $this->body ?? '';
     }
 }

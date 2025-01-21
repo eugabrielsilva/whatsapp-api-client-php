@@ -54,7 +54,7 @@ class Location
 
     /**
      * Converts the location to a Google Maps link.
-     * @return string
+     * @return string Returns the URL.
      */
     public function toGoogleMaps()
     {
@@ -63,7 +63,7 @@ class Location
 
     /**
      * Converts the location to an Apple Maps link.
-     * @return string
+     * @return string Returns the URL.
      */
     public function toAppleMaps()
     {
@@ -72,7 +72,7 @@ class Location
 
     /**
      * Converts the location to a Waze link.
-     * @return string
+     * @return string Returns the URL.
      */
     public function toWaze()
     {

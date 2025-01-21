@@ -21,4 +21,4 @@ $client = Client::create('http://localhost:3000', 'optional_auth_token');
 
 ## Testing
 
-Copy `tests/_env.example.php` to `tests/_env.php` to setup the test environment.
+Copy `tests/_env.example.php` to `tests/_env.php` and setup the test environment.
