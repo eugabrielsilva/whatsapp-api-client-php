@@ -8,7 +8,8 @@ use WhatsAppPHP\Util;
 
 /**
  * WhatsApp PHP Message entity.
- * @package eugabrielsilva/whatsapp-php
+ * @author Gabriel Silva
+ * @license MIT
  */
 class Message
 {
@@ -108,6 +109,7 @@ class Message
     /**
      * Gets the profile of the message sender.
      * @return Profile|null Returns the profile if found.
+     * @throws RequestException Throws an exception if the request fails.
      */
     public function getFromProfile()
     {
@@ -117,6 +119,7 @@ class Message
     /**
      * Gets the profile of the message receiver.
      * @return Profile|null Returns the profile if found.
+     * @throws RequestException Throws an exception if the request fails.
      */
     public function getToProfile()
     {
@@ -127,6 +130,7 @@ class Message
      * Replies the message to the sender.
      * @param string $message Message body.
      * @return bool Returns true on success, false on failure.
+     * @throws RequestException Throws an exception if the request fails.
      */
     public function reply(string $message)
     {
@@ -139,6 +143,6 @@ class Message
      */
     public function __toString()
     {
-        return $this->body ?? '';
+        return $this->body;
     }
 }

@@ -2,9 +2,14 @@
 
 namespace WhatsAppPHP\Entity;
 
-use Exception;
+use WhatsAppPHP\Exception\DownloadMediaException;
 use WhatsAppPHP\Util;
 
+/**
+ * WhatsApp PHP QRCode entity.
+ * @author Gabriel Silva
+ * @license MIT
+ */
 class QRCode
 {
     /**
@@ -51,6 +56,7 @@ class QRCode
      * @param string $path Path where to save the file.
      * @param string $filename (Optional) Image filename, if blank it will be random.
      * @return string Returns the saved file location.
+     * @throws DownloadMediaException Throws an exception if the saving fails.
      */
     public function save(string $path, ?string $filename = null)
     {
@@ -59,7 +65,7 @@ class QRCode
         $fullPath = $path . $filename;
 
         if (!file_put_contents($fullPath, $this->toBlob())) {
-            throw new Exception("Error saving data to file: {$fullPath}");
+            throw new DownloadMediaException("Error saving data to file: {$fullPath}");
         }
 
         return $fullPath;

@@ -6,7 +6,8 @@ use Exception;
 
 /**
  * WhatsApp PHP Download Media exception.
- * @package eugabrielsilva/whatsapp-php
+ * @author Gabriel Silva
+ * @license MIT
  */
 class DownloadMediaException extends Exception
 {

@@ -7,7 +7,8 @@ use Throwable;
 
 /**
  * WhatsApp PHP Request exception.
- * @package eugabrielsilva/whatsapp-php
+ * @author Gabriel Silva
+ * @license MIT
  */
 class RequestException extends Exception
 {

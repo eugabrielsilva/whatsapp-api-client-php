@@ -6,7 +6,8 @@ use WhatsAppPHP\Util;
 
 /**
  * WhatsApp PHP Location entity.
- * @package eugabrielsilva/whatsapp-php
+ * @author Gabriel Silva
+ * @license MIT
  */
 class Location
 {

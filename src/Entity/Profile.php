@@ -8,7 +8,8 @@ use WhatsAppPHP\Util;
 
 /**
  * WhatsApp PHP Profile entity.
- * @package eugabrielsilva/whatsapp-php
+ * @author Gabriel Silva
+ * @license MIT
  */
 class Profile
 {
@@ -100,6 +101,7 @@ class Profile
      * Gets the messages from this profile.
      * @param int|null $limit (Optional) Maximum number of messages to fetch. Leave blank to get as many as possible.
      * @return Message[] Returns a list of messages.
+     * @throws RequestException Throws an exception if the request fails.
      */
     public function getMessages(?int $limit = null)
     {
@@ -110,6 +112,7 @@ class Profile
      * Sends a text message to this profile.
      * @param string $message Message body.
      * @return bool Returns true on success, false on failure.
+     * @throws RequestException Throws an exception if the request fails.
      */
     public function sendMessage(string $message)
     {
@@ -123,6 +126,7 @@ class Profile
      * @param string|null $address (Optional) Address name to include in the message.
      * @param string|null $url (Optional) URL to include in the message.
      * @return bool Returns true on success, false on failure.
+     * @throws RequestException Throws an exception if the request fails.
      */
     public function sendLocation(int $latitude, int $longitude, ?string $address = null, ?string $url = null)
     {
@@ -139,6 +143,7 @@ class Profile
      * @param bool $asGif (Optional) Send video media as a GIF.
      * @param bool $asSticker (Optional) Send image media as a sticker.
      * @return bool Returns true on success, false on failure.
+     * @throws RequestException Throws an exception if the request fails.
      */
     public function sendMedia(string $file, ?string $message = null, bool $viewOnce = false, bool $asDocument = false, bool $asVoice = false, bool $asGif = false, bool $asSticker = false)
     {
@@ -149,6 +154,7 @@ class Profile
      * Sends a sticker to this profile.
      * @param string $file Sticker image file location path or remote URL.
      * @return bool Returns true on success, false on failure.
+     * @throws RequestException Throws an exception if the request fails.
      */
     public function sendSticker(string $file)
     {
@@ -160,6 +166,7 @@ class Profile
      * @param string $file Audio file location path or remote URL.
      * @param bool $viewOnce (Optional) Send the audio as view once.
      * @return bool Returns true on success, false on failure.
+     * @throws RequestException Throws an exception if the request fails.
      */
     public function sendVoice(string $file, bool $viewOnce = false)
     {
@@ -171,6 +178,7 @@ class Profile
      * @param string $path Location folder in where to salve the file.
      * @param string $filename (Optional) Custom filename to set, leave blank to use the original filename.
      * @return string Returns the downloaded file location.
+     * @throws DownloadMediaException Throws an exception if the profile picture is not available or the download fails.
      */
     public function downloadProfilePicture(string $path, ?string $filename = null)
     {

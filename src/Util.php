@@ -6,7 +6,8 @@ use WhatsAppPHP\Exception\DownloadMediaException;
 
 /**
  * WhatsApp PHP utility class.
- * @package eugabrielsilva/whatsapp-php
+ * @author Gabriel Silva
+ * @license MIT
  */
 class Util
 {
@@ -41,6 +42,7 @@ class Util
      * @param string $path Location folder in where to salve the file.
      * @param string $filename (Optional) Custom filename to set, leave blank to use the original filename.
      * @return string Returns the downloaded file location.
+     * @throws RequestException Throws an exception if the download fails.
      */
     public static function downloadFile(string $url, string $path, ?string $filename = null): string
     {

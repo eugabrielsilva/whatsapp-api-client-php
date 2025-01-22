@@ -12,7 +12,8 @@ use WhatsAppPHP\Exception\RequestException;
 
 /**
  * WhatsApp PHP client instance.
- * @package eugabrielsilva/whatsapp-php
+ * @author Gabriel Silva
+ * @license MIT
  */
 class Client
 {
@@ -97,6 +98,7 @@ class Client
     /**
      * Gets the current Client instance.
      * @return Client Returns the client instance.
+     * @throws Exception Throws an exception if the Client instance was not created.
      */
     public static function getInstance()
     {
@@ -107,6 +109,7 @@ class Client
     /**
      * Checks if the client is logged in to WhatsApp.
      * @return bool Returns true on logged in, otherwise false.
+     * @throws RequestException Throws an exception if the request fails.
      */
     public function checkLogin()
     {
@@ -117,6 +120,7 @@ class Client
     /**
      * Performs a login to WhatsApp, if the client is not logged yet.
      * @return QRCode|bool Returns the QR Code, false if already logged in.
+     * @throws RequestException Throws an exception if the request fails.
      */
     public function login()
     {
@@ -127,6 +131,7 @@ class Client
     /**
      * Disconnects from WhatsApp, if the client is already logged in.
      * @return bool Returns true on success, false on failure.
+     * @throws RequestException Throws an exception if the request fails.
      */
     public function logout()
     {
@@ -137,6 +142,7 @@ class Client
     /**
      * Sends an Online presence status to the client.
      * @return bool Returns true on success, false on failure.
+     * @throws RequestException Throws an exception if the request fails.
      */
     public function setOnline()
     {
@@ -147,6 +153,7 @@ class Client
     /**
      * Sends an Offline presence status to the client.
      * @return bool Returns true on success, false on failure.
+     * @throws RequestException Throws an exception if the request fails.
      */
     public function setOffline()
     {
@@ -159,6 +166,7 @@ class Client
      * @param string $number Contact number to fetch messages.
      * @param int|null $limit (Optional) Maximum number of messages to fetch. Leave blank to get as many as possible.
      * @return Message[] Returns a list of messages.
+     * @throws RequestException Throws an exception if the request fails.
      */
     public function getMessages(string $number, ?int $limit = null)
     {
@@ -178,6 +186,7 @@ class Client
      * @param int|null $limit (Optional) Maximum number of messages to fetch.
      * @param int|null $page (Optional) Results page number.
      * @return Message[] Returns a list of messages.
+     * @throws RequestException Throws an exception if the request fails.
      */
     public function searchMessages(string $query, ?string $number = null, ?int $limit = null, ?int $page = null)
     {
@@ -196,6 +205,7 @@ class Client
     /**
      * Get a list of available chats.
      * @return Chat[] Returns a list of chats.
+     * @throws RequestException Throws an exception if the request fails.
      */
     public function getChats()
     {
@@ -210,6 +220,7 @@ class Client
      * Gets a user profile.
      * @param string $number Contact number to fetch profile.
      * @return Profile|null Returns the profile if found.
+     * @throws RequestException Throws an exception if the request fails.
      */
     public function getProfile(string $number)
     {
@@ -221,6 +232,7 @@ class Client
     /**
      * Gets a list of all contact profiles.
      * @return Profile[] Returns a list of profiles.
+     * @throws RequestException Throws an exception if the request fails.
      */
     public function getContacts()
     {
@@ -234,6 +246,7 @@ class Client
     /**
      * Gets the current connected user profile.
      * @return Profile|null Returns the profile if found.
+     * @throws RequestException Throws an exception if the request fails.
      */
     public function getUser()
     {
@@ -247,6 +260,7 @@ class Client
      * @param string $message Message body.
      * @param string|null $replyTo (Optional) Another message ID to reply to.
      * @return bool Returns true on success, false on failure.
+     * @throws RequestException Throws an exception if the request fails.
      */
     public function sendMessage(string $number, string $message, ?string $replyTo = null)
     {
@@ -268,6 +282,7 @@ class Client
      * @param string|null $url (Optional) URL to include in the message.
      * @param string|null $replyTo (Optional) Another message ID to reply to.
      * @return bool Returns true on success, false on failure.
+     * @throws RequestException Throws an exception if the request fails.
      */
     public function sendLocation(string $number, int $latitude, int $longitude, ?string $address = null, ?string $url = null, ?string $replyTo = null)
     {
@@ -295,6 +310,7 @@ class Client
      * @param bool $asSticker (Optional) Send image media as a sticker.
      * @param string|null $replyTo (Optional) Another message ID to reply to.
      * @return bool Returns true on success, false on failure.
+     * @throws RequestException Throws an exception if the request fails.
      */
     public function sendMedia(string $number, string $file, ?string $message = null, bool $viewOnce = false, bool $asDocument = false, bool $asVoice = false, bool $asGif = false, bool $asSticker = false, ?string $replyTo = null)
     {
@@ -318,6 +334,7 @@ class Client
      * @param string $file Sticker image file location path or remote URL.
      * @param string|null $replyTo (Optional) Another message ID to reply to.
      * @return bool Returns true on success, false on failure.
+     * @throws RequestException Throws an exception if the request fails.
      */
     public function sendSticker(string $number, string $file, ?string $replyTo = null)
     {
@@ -331,6 +348,7 @@ class Client
      * @param bool $viewOnce (Optional) Send the audio as view once.
      * @param string|null $replyTo (Optional) Another message ID to reply to.
      * @return bool Returns true on success, false on failure.
+     * @throws RequestException Throws an exception if the request fails.
      */
     public function sendVoice(string $number, string $file, bool $viewOnce = false, ?string $replyTo = null)
     {
@@ -356,6 +374,7 @@ class Client
      * @param array $data (Optional) Associative array with the request body.
      * @param string $file (Optional) Uploadable file location or URL.
      * @return array|null Returns the response if valid.
+     * @throws RequestException Throws an exception if the request fails.
      */
     private function request(string $url, string $method = 'GET', array $data = [], ?string $file = null)
     {

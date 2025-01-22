@@ -7,7 +7,8 @@ use WhatsAppPHP\Util;
 
 /**
  * WhatsApp PHP Media entity.
- * @package eugabrielsilva/whatsapp-php
+ * @author Gabriel Silva
+ * @license MIT
  */
 class Media
 {
@@ -52,6 +53,7 @@ class Media
      * @param string $path Location folder in where to salve the file.
      * @param string $filename (Optional) Custom filename to set, leave blank to use the original filename.
      * @return string Returns the downloaded file location.
+     * @throws DownloadMediaException Throws an exception if the download is not available or the download fails.
      */
     public function downloadFile(string $path, ?string $filename = null)
     {
