@@ -185,4 +185,17 @@ class Profile
         if (empty($this->profilePicture)) throw new DownloadMediaException("Profile picture is not available for user {$this->number}.");
         return Util::downloadFile($this->profilePicture, $path, $filename);
     }
+
+    /**
+     * Searches for a message in this profile.
+     * @param string $query Query string to search.
+     * @param int|null $limit (Optional) Maximum number of messages to fetch.
+     * @param int|null $page (Optional) Results page number.
+     * @return Message[] Returns a list of messages.
+     * @throws RequestException Throws an exception if the request fails.
+     */
+    public function searchMessages(string $query, ?int $limit = null, ?int $page = null)
+    {
+        return Client::getInstance()->searchMessages($query, $this->number, $limit, $page);
+    }
 }

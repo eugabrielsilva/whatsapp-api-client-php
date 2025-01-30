@@ -182,7 +182,7 @@ class Client
     /**
      * Searches for a message.
      * @param string $query Query string to search.
-     * @param string|null $number (Optional) Specific contact number to search in.
+     * @param string|null $number (Optional) Specific phone number to search in.
      * @param int|null $limit (Optional) Maximum number of messages to fetch.
      * @param int|null $page (Optional) Results page number.
      * @return Message[] Returns a list of messages.
@@ -218,7 +218,7 @@ class Client
 
     /**
      * Gets a user profile.
-     * @param string $number Contact number to fetch profile.
+     * @param string $number Phone number to fetch profile.
      * @return Profile|null Returns the profile if found.
      * @throws RequestException Throws an exception if the request fails.
      */
@@ -256,7 +256,7 @@ class Client
 
     /**
      * Sends a text message.
-     * @param string $number Contact number to send message.
+     * @param string $number Phone number to send message.
      * @param string $message Message body.
      * @param string|null $replyTo (Optional) Another message ID to reply to.
      * @return bool Returns true on success, false on failure.
@@ -275,7 +275,7 @@ class Client
 
     /**
      * Sends a location pin.
-     * @param string $number Contact number to send location.
+     * @param string $number Phone number to send location.
      * @param int $latitude Latitude coordinates.
      * @param int $longitude Longitude coordinates.
      * @param string|null $address (Optional) Address name to include in the message.
@@ -300,7 +300,7 @@ class Client
 
     /**
      * Sends a media message.
-     * @param string $number Contact number to send media.
+     * @param string $number Phone number to send media.
      * @param string $file File location path or remote URL.
      * @param string|null $message (Optional) Caption to send with the media.
      * @param bool $viewOnce (Optional) Send the media as view once.
@@ -330,7 +330,7 @@ class Client
 
     /**
      * Sends a sticker.
-     * @param string $number Contact number to send the sticker.
+     * @param string $number Phone number to send the sticker.
      * @param string $file Sticker image file location path or remote URL.
      * @param string|null $replyTo (Optional) Another message ID to reply to.
      * @return bool Returns true on success, false on failure.
@@ -343,7 +343,7 @@ class Client
 
     /**
      * Sends a voice message.
-     * @param string $number Contact number to send the voice message.
+     * @param string $number Phone number to send the voice message.
      * @param string $file Audio file location path or remote URL.
      * @param bool $viewOnce (Optional) Send the audio as view once.
      * @param string|null $replyTo (Optional) Another message ID to reply to.

@@ -191,6 +191,11 @@ Search.appendIndex(
             "summary": "Sends\u0020a\u0020voice\u0020message\u0020to\u0020this\u0020chat.",
             "url": "classes/WhatsAppPHP-Entity-Chat.html#method_sendVoice"
         },                {
+            "fqsen": "\\WhatsAppPHP\\Entity\\Chat\u003A\u003AsearchMessages\u0028\u0029",
+            "name": "searchMessages",
+            "summary": "Searches\u0020for\u0020a\u0020message\u0020in\u0020this\u0020chat.",
+            "url": "classes/WhatsAppPHP-Entity-Chat.html#method_searchMessages"
+        },                {
             "fqsen": "\\WhatsAppPHP\\Entity\\Chat\u003A\u003A\u0024id",
             "name": "id",
             "summary": "Chat\u0020ID\u0020\/\u0020number.",
@@ -455,6 +460,11 @@ Search.appendIndex(
             "name": "downloadProfilePicture",
             "summary": "Downloads\u0020the\u0020profile\u0020picture,\u0020if\u0020available,\u0020to\u0020the\u0020local\u0020disk.",
             "url": "classes/WhatsAppPHP-Entity-Profile.html#method_downloadProfilePicture"
+        },                {
+            "fqsen": "\\WhatsAppPHP\\Entity\\Profile\u003A\u003AsearchMessages\u0028\u0029",
+            "name": "searchMessages",
+            "summary": "Searches\u0020for\u0020a\u0020message\u0020in\u0020this\u0020profile.",
+            "url": "classes/WhatsAppPHP-Entity-Profile.html#method_searchMessages"
         },                {
             "fqsen": "\\WhatsAppPHP\\Entity\\Profile\u003A\u003A\u0024number",
             "name": "number",

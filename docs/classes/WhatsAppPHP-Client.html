@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title>WhatsApp API Client for PHP</title>
+            <title>WhatsApp PHP</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="../">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/base.css">
             <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/template.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
@@ -19,12 +19,13 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-highlight/prism-line-highlight.css">
                 <script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
         <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+        <script src="js/template.js"></script>
         <script src="js/search.js"></script>
         <script defer src="js/searchIndex.js"></script>
     </head>
 <body id="top">
     <header class="phpdocumentor-header phpdocumentor-section">
-    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">WhatsApp API Client for PHP</a></h1>
+    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">WhatsApp PHP</a></h1>
     <input class="phpdocumentor-header__menu-button" type="checkbox" id="menu-button" name="menu-button" />
     <label class="phpdocumentor-header__menu-icon" for="menu-button">
         <i class="fas fa-bars"></i>
@@ -52,8 +53,8 @@
 <label class="phpdocumentor-sidebar__menu-icon" for="sidebar-button">
     Menu
 </label>
-<aside class="phpdocumentor-column -four phpdocumentor-sidebar">
-                    <section class="phpdocumentor-sidebar__category">
+<aside class="phpdocumentor-column -three phpdocumentor-sidebar">
+                    <section class="phpdocumentor-sidebar__category -namespaces">
             <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
     <a href="namespaces/whatsappphp.html" class="">WhatsAppPHP</a>
@@ -70,7 +71,7 @@
             </ul>
 
                         </section>
-                <section class="phpdocumentor-sidebar__category">
+                <section class="phpdocumentor-sidebar__category -packages">
             <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
     <a href="packages/WhatsAppPHP.html" class="">WhatsAppPHP</a>
@@ -78,21 +79,22 @@
 
                         </section>
             
-    <section class="phpdocumentor-sidebar__category">
+    <section class="phpdocumentor-sidebar__category -reports">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
                 <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/deprecated.html">Deprecated</a></h3>
         <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/errors.html">Errors</a></h3>
         <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/markers.html">Markers</a></h3>
     </section>
 
-    <section class="phpdocumentor-sidebar__category">
+    <section class="phpdocumentor-sidebar__category -indices">
         <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
         <h3 class="phpdocumentor-sidebar__root-package"><a href="indices/files.html">Files</a></h3>
     </section>
 </aside>
 
-            <div class="phpdocumentor-column -eight phpdocumentor-content">
-                    <ul class="phpdocumentor-breadcrumbs">
+            <div class="phpdocumentor-column -nine phpdocumentor-content">
+                                <section>
+                                        <ul class="phpdocumentor-breadcrumbs">
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/whatsappphp.html">WhatsAppPHP</a></li>
     </ul>
 
@@ -111,6 +113,11 @@
     
     </h2>
 
+<div class="phpdocumentor-label-line">
+
+
+</div>
+
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Client.php"><a href="files/src-client.html"><abbr title="src/Client.php">Client.php</abbr></a></abbr>
     :
@@ -122,9 +129,11 @@
 
 
 
+
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/WhatsAppPHP-Client.html#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -145,8 +154,7 @@
 </section>
 
                                     </dd>
-                        </dl>
-
+                                            </dl>
 
 
 
@@ -154,207 +162,229 @@
 
 <h3 id="toc">
     Table of Contents
-    <a href="#toc" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/WhatsAppPHP-Client.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+
 </h3>
 
+
+
+
+
+
+
+
+
+<h4 id="toc-properties">
+    Properties
+    <a href="classes/WhatsAppPHP-Client.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
+
+</h4>
 <dl class="phpdocumentor-table-of-contents">
-                    <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/WhatsAppPHP-Client.html#property_authToken">$authToken</a>
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a class="" href="classes/WhatsAppPHP-Client.html#property_authToken">$authToken</a>
     <span>
                         &nbsp;: string|null            </span>
 </dt>
 <dd>Authentication token if any.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/WhatsAppPHP-Client.html#property_hostUrl">$hostUrl</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#property_hostUrl">$hostUrl</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
 <dd>Base URL of the API.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/WhatsAppPHP-Client.html#property_instance">$instance</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#property_instance">$instance</a>
     <span>
                         &nbsp;: <a href="classes/WhatsAppPHP-Client.html"><abbr title="\WhatsAppPHP\Client">Client</abbr></a>|null            </span>
 </dt>
 <dd>Client instance.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/WhatsAppPHP-Client.html#property_timeout">$timeout</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#property_timeout">$timeout</a>
     <span>
                         &nbsp;: int            </span>
 </dt>
 <dd>Request timeout.</dd>
 
-                <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/WhatsAppPHP-Client.html#method_checkLogin">checkLogin()</a>
+    </dl>
+
+<h4 id="toc-methods">
+    Methods
+    <a href="classes/WhatsAppPHP-Client.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
+
+</h4>
+<dl class="phpdocumentor-table-of-contents">
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a class="" href="classes/WhatsAppPHP-Client.html#method_checkLogin">checkLogin()</a>
     <span>
                                 &nbsp;: bool    </span>
 </dt>
 <dd>Checks if the client is logged in to WhatsApp.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/WhatsAppPHP-Client.html#method_consumeWebhook">consumeWebhook()</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#method_consumeWebhook">consumeWebhook()</a>
     <span>
                                 &nbsp;: <a href="classes/WhatsAppPHP-Entity-Message.html"><abbr title="\WhatsAppPHP\Entity\Message">Message</abbr></a>|null    </span>
 </dt>
 <dd>Consumes a message received webhook.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/WhatsAppPHP-Client.html#method_create">create()</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#method_create">create()</a>
     <span>
                                 &nbsp;: <a href="classes/WhatsAppPHP-Client.html"><abbr title="\WhatsAppPHP\Client">Client</abbr></a>    </span>
 </dt>
 <dd>Creates a Client instance.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/WhatsAppPHP-Client.html#method_getChats">getChats()</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#method_getChats">getChats()</a>
     <span>
                                 &nbsp;: array&lt;string|int, <a href="classes/WhatsAppPHP-Entity-Chat.html"><abbr title="\WhatsAppPHP\Entity\Chat">Chat</abbr></a>&gt;    </span>
 </dt>
 <dd>Get a list of available chats.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/WhatsAppPHP-Client.html#method_getContacts">getContacts()</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#method_getContacts">getContacts()</a>
     <span>
                                 &nbsp;: array&lt;string|int, <a href="classes/WhatsAppPHP-Entity-Profile.html"><abbr title="\WhatsAppPHP\Entity\Profile">Profile</abbr></a>&gt;    </span>
 </dt>
 <dd>Gets a list of all contact profiles.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/WhatsAppPHP-Client.html#method_getInstance">getInstance()</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#method_getInstance">getInstance()</a>
     <span>
                                 &nbsp;: <a href="classes/WhatsAppPHP-Client.html"><abbr title="\WhatsAppPHP\Client">Client</abbr></a>    </span>
 </dt>
 <dd>Gets the current Client instance.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/WhatsAppPHP-Client.html#method_getMessages">getMessages()</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#method_getMessages">getMessages()</a>
     <span>
                                 &nbsp;: array&lt;string|int, <a href="classes/WhatsAppPHP-Entity-Message.html"><abbr title="\WhatsAppPHP\Entity\Message">Message</abbr></a>&gt;    </span>
 </dt>
 <dd>Gets the messages from a chat.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/WhatsAppPHP-Client.html#method_getProfile">getProfile()</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#method_getProfile">getProfile()</a>
     <span>
                                 &nbsp;: <a href="classes/WhatsAppPHP-Entity-Profile.html"><abbr title="\WhatsAppPHP\Entity\Profile">Profile</abbr></a>|null    </span>
 </dt>
 <dd>Gets a user profile.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/WhatsAppPHP-Client.html#method_getUser">getUser()</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#method_getUser">getUser()</a>
     <span>
                                 &nbsp;: <a href="classes/WhatsAppPHP-Entity-Profile.html"><abbr title="\WhatsAppPHP\Entity\Profile">Profile</abbr></a>|null    </span>
 </dt>
 <dd>Gets the current connected user profile.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/WhatsAppPHP-Client.html#method_login">login()</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#method_login">login()</a>
     <span>
                                 &nbsp;: <a href="classes/WhatsAppPHP-Entity-QRCode.html"><abbr title="\WhatsAppPHP\Entity\QRCode">QRCode</abbr></a>|bool    </span>
 </dt>
 <dd>Performs a login to WhatsApp, if the client is not logged yet.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/WhatsAppPHP-Client.html#method_logout">logout()</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#method_logout">logout()</a>
     <span>
                                 &nbsp;: bool    </span>
 </dt>
 <dd>Disconnects from WhatsApp, if the client is already logged in.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/WhatsAppPHP-Client.html#method_searchMessages">searchMessages()</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#method_searchMessages">searchMessages()</a>
     <span>
                                 &nbsp;: array&lt;string|int, <a href="classes/WhatsAppPHP-Entity-Message.html"><abbr title="\WhatsAppPHP\Entity\Message">Message</abbr></a>&gt;    </span>
 </dt>
 <dd>Searches for a message.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/WhatsAppPHP-Client.html#method_sendLocation">sendLocation()</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#method_sendLocation">sendLocation()</a>
     <span>
                                 &nbsp;: bool    </span>
 </dt>
 <dd>Sends a location pin.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/WhatsAppPHP-Client.html#method_sendMedia">sendMedia()</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#method_sendMedia">sendMedia()</a>
     <span>
                                 &nbsp;: bool    </span>
 </dt>
 <dd>Sends a media message.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/WhatsAppPHP-Client.html#method_sendMessage">sendMessage()</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#method_sendMessage">sendMessage()</a>
     <span>
                                 &nbsp;: bool    </span>
 </dt>
 <dd>Sends a text message.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/WhatsAppPHP-Client.html#method_sendSticker">sendSticker()</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#method_sendSticker">sendSticker()</a>
     <span>
                                 &nbsp;: bool    </span>
 </dt>
 <dd>Sends a sticker.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/WhatsAppPHP-Client.html#method_sendVoice">sendVoice()</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#method_sendVoice">sendVoice()</a>
     <span>
                                 &nbsp;: bool    </span>
 </dt>
 <dd>Sends a voice message.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/WhatsAppPHP-Client.html#method_setAuthToken">setAuthToken()</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#method_setAuthToken">setAuthToken()</a>
     <span>
                                 &nbsp;: <a href="classes/WhatsAppPHP-Client.html"><abbr title="\WhatsAppPHP\Client">Client</abbr></a>    </span>
 </dt>
 <dd>Sets the API auth token.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/WhatsAppPHP-Client.html#method_setHostUrl">setHostUrl()</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#method_setHostUrl">setHostUrl()</a>
     <span>
                                 &nbsp;: <a href="classes/WhatsAppPHP-Client.html"><abbr title="\WhatsAppPHP\Client">Client</abbr></a>    </span>
 </dt>
 <dd>Sets the base URL of the API.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/WhatsAppPHP-Client.html#method_setOffline">setOffline()</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#method_setOffline">setOffline()</a>
     <span>
                                 &nbsp;: bool    </span>
 </dt>
 <dd>Sends an Offline presence status to the client.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/WhatsAppPHP-Client.html#method_setOnline">setOnline()</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#method_setOnline">setOnline()</a>
     <span>
                                 &nbsp;: bool    </span>
 </dt>
 <dd>Sends an Online presence status to the client.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/WhatsAppPHP-Client.html#method_setTimeout">setTimeout()</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#method_setTimeout">setTimeout()</a>
     <span>
                                 &nbsp;: <a href="classes/WhatsAppPHP-Client.html"><abbr title="\WhatsAppPHP\Client">Client</abbr></a>    </span>
 </dt>
 <dd>Sets the request timeout.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/WhatsAppPHP-Client.html#method___construct">__construct()</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#method___construct">__construct()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Disable construction because of Singleton pattern.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/WhatsAppPHP-Client.html#method_request">request()</a>
+    <a class="" href="classes/WhatsAppPHP-Client.html#method_request">request()</a>
     <span>
                                 &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
 </dt>
 <dd>Perform an HTTP request.</dd>
 
-        </dl>
+    </dl>
 
 
 
@@ -365,6 +395,7 @@
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
             <a href="classes/WhatsAppPHP-Client.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+
         </h3>
                     <article
         class="
@@ -376,6 +407,7 @@
     <h4 class="phpdocumentor-element__name" id="property_authToken">
         $authToken
         <a href="classes/WhatsAppPHP-Client.html#property_authToken" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
@@ -388,6 +420,7 @@
 
         <p class="phpdocumentor-summary">Authentication token if any.</p>
 
+    
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
     <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__type">string|null</span>
@@ -396,6 +429,8 @@
 
     
     
+    
+
     
 
 </article>
@@ -409,6 +444,7 @@
     <h4 class="phpdocumentor-element__name" id="property_hostUrl">
         $hostUrl
         <a href="classes/WhatsAppPHP-Client.html#property_hostUrl" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
@@ -421,6 +457,7 @@
 
         <p class="phpdocumentor-summary">Base URL of the API.</p>
 
+    
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
     <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__type">string</span>
@@ -429,6 +466,8 @@
 
     
     
+    
+
     
 
 </article>
@@ -442,6 +481,7 @@
     <h4 class="phpdocumentor-element__name" id="property_instance">
         $instance
         <a href="classes/WhatsAppPHP-Client.html#property_instance" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
@@ -454,6 +494,7 @@
 
         <p class="phpdocumentor-summary">Client instance.</p>
 
+    
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
     <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__type"><a href="classes/WhatsAppPHP-Client.html"><abbr title="\WhatsAppPHP\Client">Client</abbr></a>|null</span>
@@ -462,6 +503,8 @@
 
     
     
+    
+
     
 
 </article>
@@ -475,6 +518,7 @@
     <h4 class="phpdocumentor-element__name" id="property_timeout">
         $timeout
         <a href="classes/WhatsAppPHP-Client.html#property_timeout" class="headerlink"><i class="fas fa-link"></i></a>
+
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
@@ -487,6 +531,7 @@
 
         <p class="phpdocumentor-summary">Request timeout.</p>
 
+    
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
     <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__type">int</span>
@@ -497,6 +542,8 @@
     
     
 
+    
+
 </article>
             </section>
 
@@ -504,6 +551,7 @@
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
             <a href="classes/WhatsAppPHP-Client.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+
         </h3>
                     <article
         class="phpdocumentor-element
@@ -514,6 +562,7 @@
     <h4 class="phpdocumentor-element__name" id="method_checkLogin">
         checkLogin()
         <a href="classes/WhatsAppPHP-Client.html#method_checkLogin" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Client.php"><a href="files/src-client.html"><abbr title="src/Client.php">Client.php</abbr></a></abbr>
@@ -528,12 +577,16 @@
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">checkLogin</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
     
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/WhatsAppPHP-Client.html#method_checkLogin#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -546,15 +599,19 @@
 </section>
 
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Returns true on logged in, otherwise false.</p>
-</section>
+                                            </dl>
 
     
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Returns true on logged in, otherwise false.</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -565,6 +622,7 @@
     <h4 class="phpdocumentor-element__name" id="method_consumeWebhook">
         consumeWebhook()
         <a href="classes/WhatsAppPHP-Client.html#method_consumeWebhook" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Client.php"><a href="files/src-client.html"><abbr title="src/Client.php">Client.php</abbr></a></abbr>
@@ -579,6 +637,9 @@
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">consumeWebhook</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$body</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Entity-Message.html"><abbr title="\WhatsAppPHP\Entity\Message">Message</abbr></a>|null</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -595,13 +656,17 @@
 
     
 
+    
+
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Entity-Message.html"><abbr title="\WhatsAppPHP\Entity\Message">Message</abbr></a>|null</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Returns the message if valid.</p>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Entity-Message.html"><abbr title="\WhatsAppPHP\Entity\Message">Message</abbr></a>|null</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Returns the message if valid.</p>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -612,6 +677,7 @@
     <h4 class="phpdocumentor-element__name" id="method_create">
         create()
         <a href="classes/WhatsAppPHP-Client.html#method_create" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Client.php"><a href="files/src-client.html"><abbr title="src/Client.php">Client.php</abbr></a></abbr>
@@ -626,6 +692,9 @@
     <span class="phpdocumentor-signature__visibility">public</span>
             <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">create</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$hostUrl</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$authToken</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$timeout</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">30</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Client.html"><abbr title="\WhatsAppPHP\Client">Client</abbr></a></span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -660,13 +729,17 @@
 
     
 
+    
+
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Client.html"><abbr title="\WhatsAppPHP\Client">Client</abbr></a></span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Returns the client instance.</p>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Client.html"><abbr title="\WhatsAppPHP\Client">Client</abbr></a></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Returns the client instance.</p>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -677,6 +750,7 @@
     <h4 class="phpdocumentor-element__name" id="method_getChats">
         getChats()
         <a href="classes/WhatsAppPHP-Client.html#method_getChats" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Client.php"><a href="files/src-client.html"><abbr title="src/Client.php">Client.php</abbr></a></abbr>
@@ -691,12 +765,16 @@
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">getChats</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/WhatsAppPHP-Entity-Chat.html"><abbr title="\WhatsAppPHP\Entity\Chat">Chat</abbr></a>&gt;</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
     
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/WhatsAppPHP-Client.html#method_getChats#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -709,15 +787,19 @@
 </section>
 
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/WhatsAppPHP-Entity-Chat.html"><abbr title="\WhatsAppPHP\Entity\Chat">Chat</abbr></a>&gt;</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Returns a list of chats.</p>
-</section>
+                                            </dl>
 
     
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/WhatsAppPHP-Entity-Chat.html"><abbr title="\WhatsAppPHP\Entity\Chat">Chat</abbr></a>&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Returns a list of chats.</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -728,6 +810,7 @@
     <h4 class="phpdocumentor-element__name" id="method_getContacts">
         getContacts()
         <a href="classes/WhatsAppPHP-Client.html#method_getContacts" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Client.php"><a href="files/src-client.html"><abbr title="src/Client.php">Client.php</abbr></a></abbr>
@@ -742,12 +825,16 @@
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">getContacts</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/WhatsAppPHP-Entity-Profile.html"><abbr title="\WhatsAppPHP\Entity\Profile">Profile</abbr></a>&gt;</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
     
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/WhatsAppPHP-Client.html#method_getContacts#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -760,15 +847,19 @@
 </section>
 
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/WhatsAppPHP-Entity-Profile.html"><abbr title="\WhatsAppPHP\Entity\Profile">Profile</abbr></a>&gt;</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Returns a list of profiles.</p>
-</section>
+                                            </dl>
 
     
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/WhatsAppPHP-Entity-Profile.html"><abbr title="\WhatsAppPHP\Entity\Profile">Profile</abbr></a>&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Returns a list of profiles.</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -779,6 +870,7 @@
     <h4 class="phpdocumentor-element__name" id="method_getInstance">
         getInstance()
         <a href="classes/WhatsAppPHP-Client.html#method_getInstance" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Client.php"><a href="files/src-client.html"><abbr title="src/Client.php">Client.php</abbr></a></abbr>
@@ -793,12 +885,16 @@
     <span class="phpdocumentor-signature__visibility">public</span>
             <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">getInstance</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Client.html"><abbr title="\WhatsAppPHP\Client">Client</abbr></a></span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
     
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/WhatsAppPHP-Client.html#method_getInstance#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -811,15 +907,19 @@
 </section>
 
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Client.html"><abbr title="\WhatsAppPHP\Client">Client</abbr></a></span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Returns the client instance.</p>
-</section>
+                                            </dl>
 
     
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Client.html"><abbr title="\WhatsAppPHP\Client">Client</abbr></a></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Returns the client instance.</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -830,6 +930,7 @@
     <h4 class="phpdocumentor-element__name" id="method_getMessages">
         getMessages()
         <a href="classes/WhatsAppPHP-Client.html#method_getMessages" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Client.php"><a href="files/src-client.html"><abbr title="src/Client.php">Client.php</abbr></a></abbr>
@@ -844,6 +945,9 @@
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">getMessages</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$number</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$limit</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/WhatsAppPHP-Entity-Message.html"><abbr title="\WhatsAppPHP\Entity\Message">Message</abbr></a>&gt;</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -870,7 +974,8 @@
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/WhatsAppPHP-Client.html#method_getMessages#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -883,15 +988,19 @@
 </section>
 
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/WhatsAppPHP-Entity-Message.html"><abbr title="\WhatsAppPHP\Entity\Message">Message</abbr></a>&gt;</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Returns a list of messages.</p>
-</section>
+                                            </dl>
 
     
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/WhatsAppPHP-Entity-Message.html"><abbr title="\WhatsAppPHP\Entity\Message">Message</abbr></a>&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Returns a list of messages.</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -902,6 +1011,7 @@
     <h4 class="phpdocumentor-element__name" id="method_getProfile">
         getProfile()
         <a href="classes/WhatsAppPHP-Client.html#method_getProfile" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Client.php"><a href="files/src-client.html"><abbr title="src/Client.php">Client.php</abbr></a></abbr>
@@ -916,6 +1026,9 @@
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">getProfile</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$number</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Entity-Profile.html"><abbr title="\WhatsAppPHP\Entity\Profile">Profile</abbr></a>|null</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -924,7 +1037,7 @@
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Contact number to fetch profile.</p>
+                    <section class="phpdocumentor-description"><p>Phone number to fetch profile.</p>
 </section>
 
             </dd>
@@ -933,7 +1046,8 @@
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/WhatsAppPHP-Client.html#method_getProfile#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -946,15 +1060,19 @@
 </section>
 
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Entity-Profile.html"><abbr title="\WhatsAppPHP\Entity\Profile">Profile</abbr></a>|null</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Returns the profile if found.</p>
-</section>
+                                            </dl>
 
     
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Entity-Profile.html"><abbr title="\WhatsAppPHP\Entity\Profile">Profile</abbr></a>|null</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Returns the profile if found.</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -965,6 +1083,7 @@
     <h4 class="phpdocumentor-element__name" id="method_getUser">
         getUser()
         <a href="classes/WhatsAppPHP-Client.html#method_getUser" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Client.php"><a href="files/src-client.html"><abbr title="src/Client.php">Client.php</abbr></a></abbr>
@@ -979,12 +1098,16 @@
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">getUser</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Entity-Profile.html"><abbr title="\WhatsAppPHP\Entity\Profile">Profile</abbr></a>|null</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
     
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/WhatsAppPHP-Client.html#method_getUser#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -997,15 +1120,19 @@
 </section>
 
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Entity-Profile.html"><abbr title="\WhatsAppPHP\Entity\Profile">Profile</abbr></a>|null</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Returns the profile if found.</p>
-</section>
+                                            </dl>
 
     
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Entity-Profile.html"><abbr title="\WhatsAppPHP\Entity\Profile">Profile</abbr></a>|null</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Returns the profile if found.</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1016,6 +1143,7 @@
     <h4 class="phpdocumentor-element__name" id="method_login">
         login()
         <a href="classes/WhatsAppPHP-Client.html#method_login" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Client.php"><a href="files/src-client.html"><abbr title="src/Client.php">Client.php</abbr></a></abbr>
@@ -1030,12 +1158,16 @@
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">login</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Entity-QRCode.html"><abbr title="\WhatsAppPHP\Entity\QRCode">QRCode</abbr></a>|bool</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
     
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/WhatsAppPHP-Client.html#method_login#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1048,15 +1180,19 @@
 </section>
 
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Entity-QRCode.html"><abbr title="\WhatsAppPHP\Entity\QRCode">QRCode</abbr></a>|bool</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Returns the QR Code, false if already logged in.</p>
-</section>
+                                            </dl>
 
     
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Entity-QRCode.html"><abbr title="\WhatsAppPHP\Entity\QRCode">QRCode</abbr></a>|bool</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Returns the QR Code, false if already logged in.</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1067,6 +1203,7 @@
     <h4 class="phpdocumentor-element__name" id="method_logout">
         logout()
         <a href="classes/WhatsAppPHP-Client.html#method_logout" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Client.php"><a href="files/src-client.html"><abbr title="src/Client.php">Client.php</abbr></a></abbr>
@@ -1081,12 +1218,16 @@
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">logout</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
     
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/WhatsAppPHP-Client.html#method_logout#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1099,15 +1240,19 @@
 </section>
 
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Returns true on success, false on failure.</p>
-</section>
+                                            </dl>
 
     
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Returns true on success, false on failure.</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1118,6 +1263,7 @@
     <h4 class="phpdocumentor-element__name" id="method_searchMessages">
         searchMessages()
         <a href="classes/WhatsAppPHP-Client.html#method_searchMessages" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Client.php"><a href="files/src-client.html"><abbr title="src/Client.php">Client.php</abbr></a></abbr>
@@ -1132,6 +1278,9 @@
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">searchMessages</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$query</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$number</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$limit</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$page</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/WhatsAppPHP-Entity-Message.html"><abbr title="\WhatsAppPHP\Entity\Message">Message</abbr></a>&gt;</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1149,7 +1298,7 @@
                 : <span class="phpdocumentor-signature__argument__return-type">string|null</span>
                  = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>(Optional) Specific contact number to search in.</p>
+                    <section class="phpdocumentor-description"><p>(Optional) Specific phone number to search in.</p>
 </section>
 
             </dd>
@@ -1176,7 +1325,8 @@
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/WhatsAppPHP-Client.html#method_searchMessages#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1189,15 +1339,19 @@
 </section>
 
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/WhatsAppPHP-Entity-Message.html"><abbr title="\WhatsAppPHP\Entity\Message">Message</abbr></a>&gt;</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Returns a list of messages.</p>
-</section>
+                                            </dl>
 
     
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/WhatsAppPHP-Entity-Message.html"><abbr title="\WhatsAppPHP\Entity\Message">Message</abbr></a>&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Returns a list of messages.</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1208,6 +1362,7 @@
     <h4 class="phpdocumentor-element__name" id="method_sendLocation">
         sendLocation()
         <a href="classes/WhatsAppPHP-Client.html#method_sendLocation" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Client.php"><a href="files/src-client.html"><abbr title="src/Client.php">Client.php</abbr></a></abbr>
@@ -1222,6 +1377,9 @@
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">sendLocation</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$number</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$latitude</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$longitude</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$address</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$url</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$replyTo</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1230,7 +1388,7 @@
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Contact number to send location.</p>
+                    <section class="phpdocumentor-description"><p>Phone number to send location.</p>
 </section>
 
             </dd>
@@ -1284,7 +1442,8 @@
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/WhatsAppPHP-Client.html#method_sendLocation#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1297,15 +1456,19 @@
 </section>
 
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Returns true on success, false on failure.</p>
-</section>
+                                            </dl>
 
     
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Returns true on success, false on failure.</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1316,6 +1479,7 @@
     <h4 class="phpdocumentor-element__name" id="method_sendMedia">
         sendMedia()
         <a href="classes/WhatsAppPHP-Client.html#method_sendMedia" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Client.php"><a href="files/src-client.html"><abbr title="src/Client.php">Client.php</abbr></a></abbr>
@@ -1330,6 +1494,9 @@
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">sendMedia</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$number</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$message</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$viewOnce</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$asDocument</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$asVoice</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$asGif</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$asSticker</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$replyTo</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1338,7 +1505,7 @@
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Contact number to send media.</p>
+                    <section class="phpdocumentor-description"><p>Phone number to send media.</p>
 </section>
 
             </dd>
@@ -1419,7 +1586,8 @@
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/WhatsAppPHP-Client.html#method_sendMedia#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1432,15 +1600,19 @@
 </section>
 
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Returns true on success, false on failure.</p>
-</section>
+                                            </dl>
 
     
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Returns true on success, false on failure.</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1451,6 +1623,7 @@
     <h4 class="phpdocumentor-element__name" id="method_sendMessage">
         sendMessage()
         <a href="classes/WhatsAppPHP-Client.html#method_sendMessage" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Client.php"><a href="files/src-client.html"><abbr title="src/Client.php">Client.php</abbr></a></abbr>
@@ -1465,6 +1638,9 @@
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">sendMessage</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$number</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$message</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$replyTo</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1473,7 +1649,7 @@
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Contact number to send message.</p>
+                    <section class="phpdocumentor-description"><p>Phone number to send message.</p>
 </section>
 
             </dd>
@@ -1500,7 +1676,8 @@
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/WhatsAppPHP-Client.html#method_sendMessage#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1513,15 +1690,19 @@
 </section>
 
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Returns true on success, false on failure.</p>
-</section>
+                                            </dl>
 
     
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Returns true on success, false on failure.</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1532,6 +1713,7 @@
     <h4 class="phpdocumentor-element__name" id="method_sendSticker">
         sendSticker()
         <a href="classes/WhatsAppPHP-Client.html#method_sendSticker" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Client.php"><a href="files/src-client.html"><abbr title="src/Client.php">Client.php</abbr></a></abbr>
@@ -1546,6 +1728,9 @@
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">sendSticker</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$number</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$replyTo</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1554,7 +1739,7 @@
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Contact number to send the sticker.</p>
+                    <section class="phpdocumentor-description"><p>Phone number to send the sticker.</p>
 </section>
 
             </dd>
@@ -1581,7 +1766,8 @@
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/WhatsAppPHP-Client.html#method_sendSticker#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1594,15 +1780,19 @@
 </section>
 
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Returns true on success, false on failure.</p>
-</section>
+                                            </dl>
 
     
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Returns true on success, false on failure.</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1613,6 +1803,7 @@
     <h4 class="phpdocumentor-element__name" id="method_sendVoice">
         sendVoice()
         <a href="classes/WhatsAppPHP-Client.html#method_sendVoice" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Client.php"><a href="files/src-client.html"><abbr title="src/Client.php">Client.php</abbr></a></abbr>
@@ -1627,6 +1818,9 @@
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">sendVoice</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$number</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$viewOnce</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$replyTo</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1635,7 +1829,7 @@
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Contact number to send the voice message.</p>
+                    <section class="phpdocumentor-description"><p>Phone number to send the voice message.</p>
 </section>
 
             </dd>
@@ -1671,7 +1865,8 @@
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/WhatsAppPHP-Client.html#method_sendVoice#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1684,15 +1879,19 @@
 </section>
 
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Returns true on success, false on failure.</p>
-</section>
+                                            </dl>
 
     
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Returns true on success, false on failure.</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1703,6 +1902,7 @@
     <h4 class="phpdocumentor-element__name" id="method_setAuthToken">
         setAuthToken()
         <a href="classes/WhatsAppPHP-Client.html#method_setAuthToken" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Client.php"><a href="files/src-client.html"><abbr title="src/Client.php">Client.php</abbr></a></abbr>
@@ -1717,6 +1917,9 @@
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">setAuthToken</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$authToken</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Client.html"><abbr title="\WhatsAppPHP\Client">Client</abbr></a></span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1733,13 +1936,17 @@
 
     
 
+    
+
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Client.html"><abbr title="\WhatsAppPHP\Client">Client</abbr></a></span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Returns the client instance.</p>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Client.html"><abbr title="\WhatsAppPHP\Client">Client</abbr></a></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Returns the client instance.</p>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1750,6 +1957,7 @@
     <h4 class="phpdocumentor-element__name" id="method_setHostUrl">
         setHostUrl()
         <a href="classes/WhatsAppPHP-Client.html#method_setHostUrl" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Client.php"><a href="files/src-client.html"><abbr title="src/Client.php">Client.php</abbr></a></abbr>
@@ -1764,6 +1972,9 @@
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">setHostUrl</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$hostUrl</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Client.html"><abbr title="\WhatsAppPHP\Client">Client</abbr></a></span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1780,13 +1991,17 @@
 
     
 
+    
+
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Client.html"><abbr title="\WhatsAppPHP\Client">Client</abbr></a></span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Returns the client instance.</p>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Client.html"><abbr title="\WhatsAppPHP\Client">Client</abbr></a></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Returns the client instance.</p>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1797,6 +2012,7 @@
     <h4 class="phpdocumentor-element__name" id="method_setOffline">
         setOffline()
         <a href="classes/WhatsAppPHP-Client.html#method_setOffline" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Client.php"><a href="files/src-client.html"><abbr title="src/Client.php">Client.php</abbr></a></abbr>
@@ -1811,12 +2027,16 @@
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">setOffline</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
     
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/WhatsAppPHP-Client.html#method_setOffline#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1829,15 +2049,19 @@
 </section>
 
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Returns true on success, false on failure.</p>
-</section>
+                                            </dl>
 
     
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Returns true on success, false on failure.</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1848,6 +2072,7 @@
     <h4 class="phpdocumentor-element__name" id="method_setOnline">
         setOnline()
         <a href="classes/WhatsAppPHP-Client.html#method_setOnline" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Client.php"><a href="files/src-client.html"><abbr title="src/Client.php">Client.php</abbr></a></abbr>
@@ -1862,12 +2087,16 @@
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">setOnline</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
     
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/WhatsAppPHP-Client.html#method_setOnline#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -1880,15 +2109,19 @@
 </section>
 
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Returns true on success, false on failure.</p>
-</section>
+                                            </dl>
 
     
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Returns true on success, false on failure.</p>
+</section>
+
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1899,6 +2132,7 @@
     <h4 class="phpdocumentor-element__name" id="method_setTimeout">
         setTimeout()
         <a href="classes/WhatsAppPHP-Client.html#method_setTimeout" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Client.php"><a href="files/src-client.html"><abbr title="src/Client.php">Client.php</abbr></a></abbr>
@@ -1913,6 +2147,9 @@
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">setTimeout</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$timeout</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Client.html"><abbr title="\WhatsAppPHP\Client">Client</abbr></a></span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1929,13 +2166,17 @@
 
     
 
+    
+
+            <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Client.html"><abbr title="\WhatsAppPHP\Client">Client</abbr></a></span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Returns the client instance.</p>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/WhatsAppPHP-Client.html"><abbr title="\WhatsAppPHP\Client">Client</abbr></a></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Returns the client instance.</p>
 </section>
 
-    
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1946,6 +2187,7 @@
     <h4 class="phpdocumentor-element__name" id="method___construct">
         __construct()
         <a href="classes/WhatsAppPHP-Client.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Client.php"><a href="files/src-client.html"><abbr title="src/Client.php">Client.php</abbr></a></abbr>
@@ -1960,14 +2202,15 @@
     <span class="phpdocumentor-signature__visibility">private</span>
                     <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
     
     
 
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-        
+    
+
     
 </article>
                     <article
@@ -1979,6 +2222,7 @@
     <h4 class="phpdocumentor-element__name" id="method_request">
         request()
         <a href="classes/WhatsAppPHP-Client.html#method_request" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Client.php"><a href="files/src-client.html"><abbr title="src/Client.php">Client.php</abbr></a></abbr>
@@ -1993,6 +2237,9 @@
     <span class="phpdocumentor-signature__visibility">private</span>
                     <span class="phpdocumentor-signature__name">request</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$url</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$method</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;GET&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$data</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$file</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -2037,7 +2284,8 @@
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/WhatsAppPHP-Client.html#method_request#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
@@ -2050,82 +2298,175 @@
 </section>
 
                                     </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>Returns the response if valid.</p>
-</section>
+                                            </dl>
 
     
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Returns the response if valid.</p>
+</section>
+
+            </section>
+
 </article>
             </section>
 
-        
+        <div class="phpdocumentor-modal" id="source-view">
+    <div class="phpdocumentor-modal-bg" data-exit-button></div>
+    <div class="phpdocumentor-modal-container">
+        <div class="phpdocumentor-modal-content">
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/Client.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+        </div>
+        <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
+    </div>
+</div>
+
     <script type="text/javascript">
-        function loadExternalCodeSnippets(line) {
-            Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach((pre) => {
-                var src = pre.getAttribute('data-src').replace( /\\/g, '/');
-                var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
-                var language = 'php';
+        (function () {
+            function loadExternalCodeSnippet(el, url, line) {
+                Array.prototype.slice.call(el.querySelectorAll('pre[data-src]')).forEach((pre) => {
+                    const src = url || pre.getAttribute('data-src').replace(/\\/g, '/');
+                    const language = 'php';
 
-                var code = document.createElement('code');
-                code.className = 'language-' + language;
+                    const code = document.createElement('code');
+                    code.className = 'language-' + language;
+                    pre.textContent = '';
+                    pre.setAttribute('data-line', line)
+                    code.textContent = 'Loading…';
+                    pre.appendChild(code);
 
-                pre.textContent = '';
+                    var xhr = new XMLHttpRequest();
 
-                pre.setAttribute('data-line', line)
-                code.textContent = 'Loading…';
+                    xhr.open('GET', src, true);
 
-                pre.appendChild(code);
-
-                var xhr = new XMLHttpRequest();
-
-                xhr.open('GET', src, true);
-
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState == 4) {
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState !== 4) {
+                            return;
+                        }
 
                         if (xhr.status < 400 && xhr.responseText) {
                             code.textContent = xhr.responseText;
-
                             Prism.highlightElement(code);
+                            return;
                         }
-                        else if (xhr.status >= 400) {
+
+                        if (xhr.status === 404) {
+                            code.textContent = '✖ Error: File could not be found';
+                            return;
+                        }
+
+                        if (xhr.status >= 400) {
                             code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                            return;
                         }
-                        else {
-                            code.textContent = '✖ Error: File does not exist, is empty or trying to view from localhost';
-                        }
+
+                        code.textContent = '✖ Error: An unknown error occurred';
+                    };
+
+                    xhr.send(null);
+                });
+            }
+
+            const modalButtons = document.querySelectorAll("[data-modal]");
+            const openedAsLocalFile = window.location.protocol === 'file:';
+            if (modalButtons.length > 0 && openedAsLocalFile) {
+                console.warn(
+                    'Viewing the source code is unavailable because you are opening this page from the file:// scheme; ' +
+                    'browsers block XHR requests when a page is opened this way'
+                );
+            }
+
+            modalButtons.forEach(function (trigger) {
+                if (openedAsLocalFile) {
+                    trigger.setAttribute("hidden", "hidden");
+                }
+
+                trigger.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const modal = document.getElementById(trigger.dataset.modal);
+                    if (!modal) {
+                        console.error(`Modal with id "${trigger.dataset.modal}" could not be found`);
+                        return;
                     }
-                };
+                    modal.classList.add("phpdocumentor-modal__open");
 
-                xhr.send(null);
-            });
-        }
-
-        var modals = document.querySelectorAll("[data-modal]");
-
-        modals.forEach(function (trigger) {
-            trigger.addEventListener("click", function (event) {
-                //event.preventDefault();
-                const modal = document.getElementById(trigger.dataset.modal);
-                modal.classList.add("phpdocumentor-modal__open");
-                loadExternalCodeSnippets(trigger.dataset.line)
-                const exits = modal.querySelectorAll("[data-exit-button]");
-                exits.forEach(function (exit) {
-                    exit.addEventListener("click", function (event) {
-                        event.preventDefault();
-                        modal.classList.remove("phpdocumentor-modal__open");
+                    loadExternalCodeSnippet(modal, trigger.dataset.src || null, trigger.dataset.line)
+                    const exits = modal.querySelectorAll("[data-exit-button]");
+                    exits.forEach(function (exit) {
+                        exit.addEventListener("click", function (event) {
+                            event.preventDefault();
+                            modal.classList.remove("phpdocumentor-modal__open");
+                        });
                     });
                 });
             });
-        });
+        })();
     </script>
 
     </article>
-                <section data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
+                                </section>
+                <section class="phpdocumentor-on-this-page__sidebar">
+                                
+    <section class="phpdocumentor-on-this-page__content">
+        <strong class="phpdocumentor-on-this-page__title">On this page</strong>
+
+        <ul class="phpdocumentor-list -clean">
+            <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
+            <li>
+                <ul class="phpdocumentor-list -clean">
+                                                            <li><a href="classes/WhatsAppPHP-Client.html#toc-properties">Properties</a></li>
+                                                            <li><a href="classes/WhatsAppPHP-Client.html#toc-methods">Methods</a></li>
+                                    </ul>
+            </li>
+            
+                            <li class="phpdocumentor-on-this-page-section__title">Properties</li>
+                <li>
+                    <ul class="phpdocumentor-list -clean">
+                                                    <li class=""><a href="classes/WhatsAppPHP-Client.html#property_authToken">$authToken</a></li>
+                                                    <li class=""><a href="classes/WhatsAppPHP-Client.html#property_hostUrl">$hostUrl</a></li>
+                                                    <li class=""><a href="classes/WhatsAppPHP-Client.html#property_instance">$instance</a></li>
+                                                    <li class=""><a href="classes/WhatsAppPHP-Client.html#property_timeout">$timeout</a></li>
+                                            </ul>
+                </li>
+            
+                        <li class="phpdocumentor-on-this-page-section__title">Methods</li>
+            <li>
+                <ul class="phpdocumentor-list -clean">
+                                            <li class=""><a href="classes/WhatsAppPHP-Client.html#method_checkLogin">checkLogin()</a></li>
+                                            <li class=""><a href="classes/WhatsAppPHP-Client.html#method_consumeWebhook">consumeWebhook()</a></li>
+                                            <li class=""><a href="classes/WhatsAppPHP-Client.html#method_create">create()</a></li>
+                                            <li class=""><a href="classes/WhatsAppPHP-Client.html#method_getChats">getChats()</a></li>
+                                            <li class=""><a href="classes/WhatsAppPHP-Client.html#method_getContacts">getContacts()</a></li>
+                                            <li class=""><a href="classes/WhatsAppPHP-Client.html#method_getInstance">getInstance()</a></li>
+                                            <li class=""><a href="classes/WhatsAppPHP-Client.html#method_getMessages">getMessages()</a></li>
+                                            <li class=""><a href="classes/WhatsAppPHP-Client.html#method_getProfile">getProfile()</a></li>
+                                            <li class=""><a href="classes/WhatsAppPHP-Client.html#method_getUser">getUser()</a></li>
+                                            <li class=""><a href="classes/WhatsAppPHP-Client.html#method_login">login()</a></li>
+                                            <li class=""><a href="classes/WhatsAppPHP-Client.html#method_logout">logout()</a></li>
+                                            <li class=""><a href="classes/WhatsAppPHP-Client.html#method_searchMessages">searchMessages()</a></li>
+                                            <li class=""><a href="classes/WhatsAppPHP-Client.html#method_sendLocation">sendLocation()</a></li>
+                                            <li class=""><a href="classes/WhatsAppPHP-Client.html#method_sendMedia">sendMedia()</a></li>
+                                            <li class=""><a href="classes/WhatsAppPHP-Client.html#method_sendMessage">sendMessage()</a></li>
+                                            <li class=""><a href="classes/WhatsAppPHP-Client.html#method_sendSticker">sendSticker()</a></li>
+                                            <li class=""><a href="classes/WhatsAppPHP-Client.html#method_sendVoice">sendVoice()</a></li>
+                                            <li class=""><a href="classes/WhatsAppPHP-Client.html#method_setAuthToken">setAuthToken()</a></li>
+                                            <li class=""><a href="classes/WhatsAppPHP-Client.html#method_setHostUrl">setHostUrl()</a></li>
+                                            <li class=""><a href="classes/WhatsAppPHP-Client.html#method_setOffline">setOffline()</a></li>
+                                            <li class=""><a href="classes/WhatsAppPHP-Client.html#method_setOnline">setOnline()</a></li>
+                                            <li class=""><a href="classes/WhatsAppPHP-Client.html#method_setTimeout">setTimeout()</a></li>
+                                            <li class=""><a href="classes/WhatsAppPHP-Client.html#method___construct">__construct()</a></li>
+                                            <li class=""><a href="classes/WhatsAppPHP-Client.html#method_request">request()</a></li>
+                                    </ul>
+            </li>
+                    </ul>
+    </section>
+
+                </section>
+                            </div>
+            <section data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
     <section class="phpdocumentor-search-results__dialog">
         <header class="phpdocumentor-search-results__header">
             <h2 class="phpdocumentor-search-results__title">Search results</h2>
@@ -2136,7 +2477,6 @@
         </section>
     </section>
 </section>
-            </div>
         </div>
         <a href="classes/WhatsAppPHP-Client.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
