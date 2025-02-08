@@ -190,6 +190,7 @@ class Client
      */
     public function searchMessages(string $query, ?string $number = null, ?int $limit = null, ?int $page = null)
     {
+        if (!is_null($number)) $number = Util::formatNumber($number);
         $response = $this->request('search-messages', 'GET', [
             'query' => $query,
             'limit' => $limit,
